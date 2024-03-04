@@ -1,0 +1,224 @@
+"operation":"create";"file":"data.csv";"pointer":null;"group":"null"
+"Harvis, generate a new set of bars in the bar chart using data from 'data.csv'"
+"create a another group of line to the chart, the data is in 'lines114.txt"
+"visualize the information in data.csv and draw out the points"
+
+"operation":"create";"file":"stocks.csv";"pointer":null;"group":"2";
+"Use the data from 'stocks.csv' to build another group of points in my scatter plot, group number should in 2"
+"I want to visualize the group 2 data in stocks.csv, help me with that"
+
+"operation":"create";"file":"flightaffim.csv";"pointer":null;"group":"flight";
+"Create and display a new batch of bars in the bar chart for 'flight', derived from 'flightaffim.csv'"
+"Integrate a new set of points into the scatter plot for 'flight' from 'flightaffim.csv'"
+"I need you to transfer the data in 'flightaffim.csv' into a new data line, group named 'flight'"
+
+"operation":"create";"file":"123.csv";"pointer":null;"group":"flight";
+"Develop additional bars in the bar chart using data from '123.csv'"
+"Harvis, draw a fresh data line in the line chart based on '123.csv'"
+"Expand the scatter plot with detailed points from '123.csv'"
+
+"operation":"encodings";"file":null;"pointer":null;"group":"B";
+"can you display the data numbers of group B for me?"
+"I need to know the numbers of group B"
+
+"operation":"encodings";"file":null;"pointer":null;"group":null;
+"I need the numerical details of our data points explicitly shown on the chart"
+"take the raw numbers of our dataset and put them on my chart"
+"Harvis, can you visually outline the exact values for our data points on the chart?"
+
+"operation":"encodings";"file":null;"pointer":null;"group":"1";
+"Illustrate the exact numerical data for group 1 on the chart"
+"Visualize the actual figures for each data point in group 1 on the chart"
+"I'm looking for a detailed numerical representation of group 1's data on the chart, with each value accurately displayed."
+
+"operation":"encodings";"file":null;"pointer":null;"group":"adamast";
+"Display the exact numerical details of group adamast's dataset on the chart"
+"Show the detailed figures for each of group adamast's data points on the chart"
+"Present the numerical encodings for group adamast directly on the chart"
+"you encode the direct values of group adamast's data numerically for me"
+
+"operation":"extend";"file":"extend.csv";"pointer":[1,2];"group":"null";
+"I want you to do a visualization extension with the first two data points in extend.csv "
+"show me the extension of this data line with the first two data from extend.csv"
+
+"operation":"extend";"file":"seavisin1902.csv";"pointer":[2,3,4];"group":"B";
+"can you do a visualize extension for me from group B, indices 2, 3, and 4 in seavisin1902?"
+"Use the second to fourth number of B in seavisin1902.csv to extend my chart"
+
+"operation":"extend";"file":"extend.csv";"pointer":[1,2,4,6];"group":"numberA";
+"I will ask you to extend this barchart with the first two, four,six data in numberA group, Use extend.csv"
+
+"operation":"extend";"file":"floews.csv";"pointer":null;"group":"null";
+"Update the bar chart with a complete set of data from 'floews.csv'"
+"Enrich data visualizations with all data from 'floews.csv'"
+
+"operation":"extend";"file":"data_add.csv";"pointer":null;"group":"1";
+"Harvis, extend 'group 1's' bar chart with all new bars frsom 'data_add.csv'"
+"Update the bar chart for 'group 1' with a complete set of data from 'data_add.csv'"
+"Harvis, scatter all the data point for 'group 1' from 'newplanes.csv' for index 1"
+
+"operation":"extend";"file":"newplanes.csv";"pointer":[2,4,5];"group":"null";
+"add some new points for me with the second, fourth and fifth numbers in newplanes.csv"
+"I need you to draw some extension bars with data from newplanes.csv, which are second, fourth and fifth"
+
+"operation":"extend";"file":"1986.csv";"pointer":[1];"group":"1";
+"I want to show the group 1's first data point in 1986.csv as my extension for this chart"
+"just use the head data in 1 of 1986.csv to do a extension for my chart"
+
+"operation":"extend";"file":"1986.csv";"pointer":[-1,-2];"group":"1";
+"can you see the last data two data points of group 1 in 1986.csv? Use them to enhance my chart"
+"put a extension visualization on my scatter plot, you can pick the data in 1986.csv in group 1, the last two points"
+
+"operation":"extend";"file":"1986.csv";"pointer":[-3,2];"group":"1";
+"with the third to last and second data in group 1 in 1986.csv, draw additional bars for me"
+"I'm gonna do a extend for my linechart, get the data of second and last third in group 1 and put it on my chart"
+
+"operation":"highlight";"file":null;"pointer":[4,5];"group":"null";
+"Use different colors to emphasize the fourth and fifth points in this line chart."
+"I need line four and five to be highlighted on this visualization."
+
+"operation":"highlight";"file":null;"pointer":[-1,-2];"group":"null";
+"Please highlight the last two data points on this chart.";
+"I want the last two lines on this line chart to be highlighted."
+"Please highlight the last two data points on the scatter plot for better visibility."
+
+"operation":"highlight";"file":null;"pointer":[-1,-2,1,2];"group":"null";
+"I want to see the first and the last two data points more clearly"
+"can you highlight the first, second, last, second last bar for me?"
+
+"operation":"highlight";"file":null;"pointer":[1,3,4,7];"group":"null";
+"Mark out the first, third, fourth, and seventh data points for me, I need to see them more clearly."
+"Use contrasting colors to highlight the first, third, fourth, and seventh data points."
+
+"operation":"highlight";"file":null;"pointer":null;"group":"null";
+"Highlight all data points on this chart for comprehensive analysis."
+"Make all lines in this line chart stand out by highlighting them."
+
+"operation":"highlight";"file":null;"pointer":[1,2,3,4,5];"group":"null";
+"I need the first five data points to be highlighted on this visualization."
+"Make the first through fifth lines in this line chart more visible"
+"Please draw attention to the first five data points by highlighting them."
+
+"operation":"highlight";"file":null;"pointer":[-2,1,3];"group":"null";
+"make the second last, the first and the third bar shown clearer"
+"can you mark out the -2,1,3 bar for me?"
+
+"operation":"highlight";"file":null;"pointer":[3];"group":"null";
+"Make the third data point stand out."
+"Accentuate the third point."
+"Spotlight bar three."
+"Point out the third data point."
+
+"operation":"highlight";"file":null;"pointer":[2,5,6];"group":"null";
+"I need the second, fifth, and sixth data points to stand out on this visualization."
+"Emphasize the second, fifth, and sixth points in this line chart using different colors."
+"Could you mark the presence of the second, fifth, and sixth data points on this scatter plot?"
+
+"operation":"highlight";"file":null;"pointer":null;"group":"A";
+"Mark out all data points in group A to highlight the entire dataset."
+"Use a distinct color to highlight all data points in group A"
+"Illuminate all data points in group A to highlight the comprehensive nature of the dataset."
+"Apply a highlighting effect to all data points in group A to visualize the entire dataset."
+
+"operation":"highlight";"file":null;"pointer":[1,2,3];"group":"A";
+"Use a distinctive marker to highlight the first second third data points in group A for clarity."
+"Emphasize the initial three data points in group A by highlighting them for clarity."
+"Display the first,second and third data points within group star with a highlighting effect for emphasis."
+
+"operation":"highlight";"file":null;"pointer":[2,3,6,7];"group":"C";
+Spotlight the second to third and sixth to seventh data points in group C on the line chart."
+"Mark the second to third, sixth, and seventh data points in group C on the pie chart for emphasis."
+
+"operation":"trendline";"file":null;"pointer":null;"group":"null";
+"calculate a linear regression for me"
+"Please summarize the trend of this chart by drawing a trendline."
+"Display the overall trend of these data points using a trendline."
+"I'd like to see the trendline representing the trend of this chart."
+"I need to see the trendline representing the trend of this chart."
+
+"operation":"trendline";"file":null;"pointer":null;"group":"mirage";
+"Generate a trendline summarizing the overall trend of the mirage group."
+"I need to see the linear regression line representing the trend of all data in the mirage."
+"Could you do a linear regression for mirage?"
+
+"operation":"trendline";"file":null;"pointer":[1,2,3];"group":"null";
+"Please show the linear regression line summarizing the trend of the top three lines."
+"Draw a trendline to visualize the trend of the first to third bars."
+"Summarize the trendline for the first three bars."
+
+"operation":"trendline";"file":null;"pointer":[-2,-3];"group":"null";
+"Could you generate a trendline summarizing the trend of the second and third from the last data points?"
+"Show the linear regression line representing the trend of the bottom three data points."
+
+"operation":"trendline";"file":null;"pointer":[1,3,5,7];"group":"null";
+"Calculate a trendline summarizing the first, third, fifth, and seventh points."
+"Generate a trendline for data points that are odd-numbered and no bigger than seven."
+
+"operation":"trendline","file":null;"pointer":null;"group":"mirage";
+"Generate a trendline summarizing the trend of the mirage group."
+"Calculate a trendline representing the overall trend of the mirage group in the line chart."
+"Draw a trendline for all data points in the mirage group"
+
+"operation":"trendline";"file":null;"pointer":[4,5,6];"group":"B";
+"Can you draw a line indicating the trend of points 4 through 6 in group B?"
+"Harvis, I need a trend overview for points 4 to 6 in group B."
+
+"operation":"reference";"file":null;"pointer":null;"group":"null";
+"Add a reference line to the pie chart."
+"I need a reference line in the bar chart."
+"Harvis, include a reference line for me."
+"Put in a reference line here"
+
+"operation":"max";"file":null;"pointer":[2,3,4];"group":"C";
+"Harvis, can you identify and display the maximum value among data points 2, 3, and 4 in group C?"
+"I need a detailed analysis that identifies the max value among data points 2, 3, and 4 in group C"
+
+"operation":"max";"file":null;"pointer":null;"group":"york";
+"Can you determine the highest value within the entire dataset of group 'york'?"
+"Please analyze all data points in 'york' to identify the max value, and provide a visualization to aid in understanding."
+
+"operation":"max";"file":null;"pointer":[-1,-2];"group":"asia";
+"I need you to find the peak value for the two last data points within 'asia', and discuss what this implies."
+"I require the max value for the final duo of data points in 'asia' to be identified. Can you elaborate on the outcome?"
+
+"operation":"max";"file":null;"pointer":[1,3,5];"group":"null";
+"Harvis, could you find and display the highest value among the specified odd-numbered data points that less than five?
+"I'm seeking the max value within data points 1, 3, 5, and 7."
+
+"operation":"mean";"file":null;"pointer":null;"group":"null";
+"I'd like to see the mean value for all the data. Can you handle that?"
+"What is the overall average of our dataset? Please compute and show."
+"Can you analyze and provide the mean for the entire collection of data?"
+
+"operation":"mean";"file":null;"pointer":null;"group":"3";
+"Can you meticulously calculate the mean for all the data points in group 3?"
+"Harvis, please calculate and show me the average value of all data points within group 3"
+"I would like a comprehensive analysis resulting in the mean of all data points in group 3, reflecting on the group's overall statistical standpoint."
+
+"operation":"mean";"file":null;"pointer":[1,2,3];"group":"A";
+"I want you to calculate the average for data points one, two, and three in group A, and present the findings in a clear manner."
+"Harvis, could you conduct an in-depth calculation of the mean for data points 1, 2, and 3 in group A, and illustrate the impact of this average?"
+
+"operation":"min";"file":null;"pointer":[1,2,3];"group":"1"
+"Harvis, can you find and highlight the minimum value among the first, second, and third data points in group 1?"
+"Evaluate the minimal value for the data points at positions 1, 2, and 3 in group 1"
+"Discover the overall least value in the data points 1, 2, and 3"
+
+"operation":"min";"file":null;"pointer":null;"group":"null";
+"Ascertain the minimal value within all data points"
+"I need the lowest value identified from all data"
+"I'm seeking the minimum value within all data points. Could you calculate this?"
+
+"operation":"min";"file":null;"pointer":[-1,-2,-3];"group":"null";
+"Harvis, can you determine the smallest value among the last three data points?
+"I need the lowest value identified among the final three data points"
+"Determine the smallest value found within the last three entries"
+
+"operation":"min";"file":null;"pointer":null;"group":"ABS"
+"found the smallest value among the group ABS"
+"I want you to check the least bar among the ABS"
+"can you point out which one in ABS is smallest?"
+
+"operation":"min";"file":null;"pointer":[1,3,4,6];"group":"occn"
+"hey, show me the least one among the first,third,fourth and sixth in occn"
+"in occn, summarize the minimal value of 1,3,4,6"

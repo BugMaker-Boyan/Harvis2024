@@ -1,0 +1,1391 @@
+[
+    {
+        "input": "Harvis, generate a new set of bars in the bar chart using data from 'data.csv'",
+        "output": {
+            "operation": "create",
+            "file": "data.csv",
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "create a another group of line to the chart, the data is in 'lines114.txt",
+        "output": {
+            "operation": "create",
+            "file": "data.csv",
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "visualize the information in data.csv and draw out the points",
+        "output": {
+            "operation": "create",
+            "file": "data.csv",
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Use the data from 'stocks.csv' to build another group of points in my scatter plot, group number should in 2",
+        "output": {
+            "operation": "create",
+            "file": "stocks.csv",
+            "pointer": null,
+            "group": "2"
+        }
+    },
+    {
+        "input": "I want to visualize the group 2 data in stocks.csv, help me with that",
+        "output": {
+            "operation": "create",
+            "file": "stocks.csv",
+            "pointer": null,
+            "group": "2"
+        }
+    },
+    {
+        "input": "Create and display a new batch of bars in the bar chart for 'flight', derived from 'flightaffim.csv'",
+        "output": {
+            "operation": "create",
+            "file": "flightaffim.csv",
+            "pointer": null,
+            "group": "flight"
+        }
+    },
+    {
+        "input": "Integrate a new set of points into the scatter plot for 'flight' from 'flightaffim.csv'",
+        "output": {
+            "operation": "create",
+            "file": "flightaffim.csv",
+            "pointer": null,
+            "group": "flight"
+        }
+    },
+    {
+        "input": "I need you to transfer the data in 'flightaffim.csv' into a new data line, group named 'flight'",
+        "output": {
+            "operation": "create",
+            "file": "flightaffim.csv",
+            "pointer": null,
+            "group": "flight"
+        }
+    },
+    {
+        "input": "Develop additional bars in the bar chart using data from '123.csv'",
+        "output": {
+            "operation": "create",
+            "file": "123.csv",
+            "pointer": null,
+            "group": "flight"
+        }
+    },
+    {
+        "input": "Harvis, draw a fresh data line in the line chart based on '123.csv'",
+        "output": {
+            "operation": "create",
+            "file": "123.csv",
+            "pointer": null,
+            "group": "flight"
+        }
+    },
+    {
+        "input": "Expand the scatter plot with detailed points from '123.csv'",
+        "output": {
+            "operation": "create",
+            "file": "123.csv",
+            "pointer": null,
+            "group": "flight"
+        }
+    },
+    {
+        "input": "can you display the data numbers of group B for me?",
+        "output": {
+            "operation": "encodings",
+            "file": null,
+            "pointer": null,
+            "group": "B"
+        }
+    },
+    {
+        "input": "I need to know the numbers of group B",
+        "output": {
+            "operation": "encodings",
+            "file": null,
+            "pointer": null,
+            "group": "B"
+        }
+    },
+    {
+        "input": "I need the numerical details of our data points explicitly shown on the chart",
+        "output": {
+            "operation": "encodings",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "take the raw numbers of our dataset and put them on my chart",
+        "output": {
+            "operation": "encodings",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Harvis, can you visually outline the exact values for our data points on the chart?",
+        "output": {
+            "operation": "encodings",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Illustrate the exact numerical data for group 1 on the chart",
+        "output": {
+            "operation": "encodings",
+            "file": null,
+            "pointer": null,
+            "group": "1"
+        }
+    },
+    {
+        "input": "Visualize the actual figures for each data point in group 1 on the chart",
+        "output": {
+            "operation": "encodings",
+            "file": null,
+            "pointer": null,
+            "group": "1"
+        }
+    },
+    {
+        "input": "I'm looking for a detailed numerical representation of group 1's data on the chart, with each value accurately displayed.",
+        "output": {
+            "operation": "encodings",
+            "file": null,
+            "pointer": null,
+            "group": "1"
+        }
+    },
+    {
+        "input": "Display the exact numerical details of group adamast's dataset on the chart",
+        "output": {
+            "operation": "encodings",
+            "file": null,
+            "pointer": null,
+            "group": "adamast"
+        }
+    },
+    {
+        "input": "Show the detailed figures for each of group adamast's data points on the chart",
+        "output": {
+            "operation": "encodings",
+            "file": null,
+            "pointer": null,
+            "group": "adamast"
+        }
+    },
+    {
+        "input": "Present the numerical encodings for group adamast directly on the chart",
+        "output": {
+            "operation": "encodings",
+            "file": null,
+            "pointer": null,
+            "group": "adamast"
+        }
+    },
+    {
+        "input": "you encode the direct values of group adamast's data numerically for me",
+        "output": {
+            "operation": "encodings",
+            "file": null,
+            "pointer": null,
+            "group": "adamast"
+        }
+    },
+    {
+        "input": "I want you to do a visualization extension with the first two data points in extend.csv",
+        "output": {
+            "operation": "extend",
+            "file": "extend.csv",
+            "pointer": [
+                1,
+                2
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "show me the extension of this data line with the first two data from extend.csv",
+        "output": {
+            "operation": "extend",
+            "file": "extend.csv",
+            "pointer": [
+                1,
+                2
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "can you do a visualize extension for me from group B, indices 2, 3, and 4 in seavisin1902?",
+        "output": {
+            "operation": "extend",
+            "file": "seavisin1902.csv",
+            "pointer": [
+                2,
+                3,
+                4
+            ],
+            "group": "B"
+        }
+    },
+    {
+        "input": "Use the second to fourth number of B in seavisin1902.csv to extend my chart",
+        "output": {
+            "operation": "extend",
+            "file": "seavisin1902.csv",
+            "pointer": [
+                2,
+                3,
+                4
+            ],
+            "group": "B"
+        }
+    },
+    {
+        "input": "I will ask you to extend this barchart with the first two, four,six data in numberA group, Use extend.csv",
+        "output": {
+            "operation": "extend",
+            "file": "extend.csv",
+            "pointer": [
+                1,
+                2,
+                4,
+                6
+            ],
+            "group": "numberA"
+        }
+    },
+    {
+        "input": "Update the bar chart with a complete set of data from 'floews.csv'",
+        "output": {
+            "operation": "extend",
+            "file": "floews.csv",
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Enrich data visualizations with all data from 'floews.csv'",
+        "output": {
+            "operation": "extend",
+            "file": "floews.csv",
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Harvis, extend 'group 1's' bar chart with all new bars frsom 'data_add.csv'",
+        "output": {
+            "operation": "extend",
+            "file": "data_add.csv",
+            "pointer": null,
+            "group": "1"
+        }
+    },
+    {
+        "input": "Update the bar chart for 'group 1' with a complete set of data from 'data_add.csv'",
+        "output": {
+            "operation": "extend",
+            "file": "data_add.csv",
+            "pointer": null,
+            "group": "1"
+        }
+    },
+    {
+        "input": "Harvis, scatter all the data point for 'group 1' from 'newplanes.csv' for index 1",
+        "output": {
+            "operation": "extend",
+            "file": "data_add.csv",
+            "pointer": null,
+            "group": "1"
+        }
+    },
+    {
+        "input": "add some new points for me with the second, fourth and fifth numbers in newplanes.csv",
+        "output": {
+            "operation": "extend",
+            "file": "newplanes.csv",
+            "pointer": [
+                2,
+                4,
+                5
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "I need you to draw some extension bars with data from newplanes.csv, which are second, fourth and fifth",
+        "output": {
+            "operation": "extend",
+            "file": "newplanes.csv",
+            "pointer": [
+                2,
+                4,
+                5
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "I want to show the group 1's first data point in 1986.csv as my extension for this chart",
+        "output": {
+            "operation": "extend",
+            "file": "1986.csv",
+            "pointer": [
+                1
+            ],
+            "group": "1"
+        }
+    },
+    {
+        "input": "just use the head data in 1 of 1986.csv to do a extension for my chart",
+        "output": {
+            "operation": "extend",
+            "file": "1986.csv",
+            "pointer": [
+                1
+            ],
+            "group": "1"
+        }
+    },
+    {
+        "input": "can you see the last data two data points of group 1 in 1986.csv? Use them to enhance my chart",
+        "output": {
+            "operation": "extend",
+            "file": "1986.csv",
+            "pointer": [
+                -1,
+                -2
+            ],
+            "group": "1"
+        }
+    },
+    {
+        "input": "put a extension visualization on my scatter plot, you can pick the data in 1986.csv in group 1, the last two points",
+        "output": {
+            "operation": "extend",
+            "file": "1986.csv",
+            "pointer": [
+                -1,
+                -2
+            ],
+            "group": "1"
+        }
+    },
+    {
+        "input": "with the third to last and second data in group 1 in 1986.csv, draw additional bars for me",
+        "output": {
+            "operation": "extend",
+            "file": "1986.csv",
+            "pointer": [
+                -3,
+                2
+            ],
+            "group": "1"
+        }
+    },
+    {
+        "input": "I'm gonna do a extend for my linechart, get the data of second and last third in group 1 and put it on my chart",
+        "output": {
+            "operation": "extend",
+            "file": "1986.csv",
+            "pointer": [
+                -3,
+                2
+            ],
+            "group": "1"
+        }
+    },
+    {
+        "input": "Use different colors to emphasize the fourth and fifth points in this line chart.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                4,
+                5
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "I need line four and five to be highlighted on this visualization.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                4,
+                5
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Please highlight the last two data points on this chart.;",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                -1,
+                -2
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "I want the last two lines on this line chart to be highlighted.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                -1,
+                -2
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Please highlight the last two data points on the scatter plot for better visibility.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                -1,
+                -2
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "I want to see the first and the last two data points more clearly",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                -1,
+                -2,
+                1,
+                2
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "can you highlight the first, second, last, second last bar for me?",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                -1,
+                -2,
+                1,
+                2
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Mark out the first, third, fourth, and seventh data points for me, I need to see them more clearly.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                1,
+                3,
+                4,
+                7
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Use contrasting colors to highlight the first, third, fourth, and seventh data points.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                1,
+                3,
+                4,
+                7
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Highlight all data points on this chart for comprehensive analysis.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Make all lines in this line chart stand out by highlighting them.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "I need the first five data points to be highlighted on this visualization.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Make the first through fifth lines in this line chart more visible",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Please draw attention to the first five data points by highlighting them.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "make the second last, the first and the third bar shown clearer",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                -2,
+                1,
+                3
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "can you mark out the -2,1,3 bar for me?",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                -2,
+                1,
+                3
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Make the third data point stand out.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                3
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Accentuate the third point.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                3
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Spotlight bar three.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                3
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Point out the third data point.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                3
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "I need the second, fifth, and sixth data points to stand out on this visualization.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                2,
+                5,
+                6
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Emphasize the second, fifth, and sixth points in this line chart using different colors.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                2,
+                5,
+                6
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Could you mark the presence of the second, fifth, and sixth data points on this scatter plot?",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                2,
+                5,
+                6
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Mark out all data points in group A to highlight the entire dataset.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": null,
+            "group": "A"
+        }
+    },
+    {
+        "input": "Use a distinct color to highlight all data points in group A",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": null,
+            "group": "A"
+        }
+    },
+    {
+        "input": "Illuminate all data points in group A to highlight the comprehensive nature of the dataset.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": null,
+            "group": "A"
+        }
+    },
+    {
+        "input": "Apply a highlighting effect to all data points in group A to visualize the entire dataset.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": null,
+            "group": "A"
+        }
+    },
+    {
+        "input": "Use a distinctive marker to highlight the first second third data points in group A for clarity.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                1,
+                2,
+                3
+            ],
+            "group": "A"
+        }
+    },
+    {
+        "input": "Emphasize the initial three data points in group A by highlighting them for clarity.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                1,
+                2,
+                3
+            ],
+            "group": "A"
+        }
+    },
+    {
+        "input": "Display the first,second and third data points within group star with a highlighting effect for emphasis.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                1,
+                2,
+                3
+            ],
+            "group": "A"
+        }
+    },
+    {
+        "input": "Spotlight the second to third and sixth to seventh data points in group C on the line chart.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                2,
+                3,
+                6,
+                7
+            ],
+            "group": "C"
+        }
+    },
+    {
+        "input": "Mark the second to third, sixth, and seventh data points in group C on the pie chart for emphasis.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                2,
+                3,
+                6,
+                7
+            ],
+            "group": "C"
+        }
+    },
+    {
+        "input": "calculate a linear regression for me",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Please summarize the trend of this chart by drawing a trendline.",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Display the overall trend of these data points using a trendline.",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "I'd like to see the trendline representing the trend of this chart.",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "I need to see the trendline representing the trend of this chart.",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Generate a trendline summarizing the overall trend of the mirage group.",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": null,
+            "group": "mirage"
+        }
+    },
+    {
+        "input": "I need to see the linear regression line representing the trend of all data in the mirage.",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": null,
+            "group": "mirage"
+        }
+    },
+    {
+        "input": "Could you do a linear regression for mirage?",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": null,
+            "group": "mirage"
+        }
+    },
+    {
+        "input": "Please show the linear regression line summarizing the trend of the top three lines.",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": [
+                1,
+                2,
+                3
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Draw a trendline to visualize the trend of the first to third bars.",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": [
+                1,
+                2,
+                3
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Summarize the trendline for the first three bars.",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": [
+                1,
+                2,
+                3
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Could you generate a trendline summarizing the trend of the second and third from the last data points?",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": [
+                -2,
+                -3
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Show the linear regression line representing the trend of the bottom three data points.",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": [
+                -2,
+                -3
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Calculate a trendline summarizing the first, third, fifth, and seventh points.",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": [
+                1,
+                3,
+                5,
+                7
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Generate a trendline for data points that are odd-numbered and no bigger than seven.",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": [
+                1,
+                3,
+                5,
+                7
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Generate a trendline summarizing the trend of the mirage group.",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": null,
+            "group": "mirage"
+        }
+    },
+    {
+        "input": "Calculate a trendline representing the overall trend of the mirage group in the line chart.",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": null,
+            "group": "mirage"
+        }
+    },
+    {
+        "input": "Draw a trendline for all data points in the mirage group",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": null,
+            "group": "mirage"
+        }
+    },
+    {
+        "input": "Can you draw a line indicating the trend of points 4 through 6 in group B?",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": [
+                4,
+                5,
+                6
+            ],
+            "group": "B"
+        }
+    },
+    {
+        "input": "Harvis, I need a trend overview for points 4 to 6 in group B.",
+        "output": {
+            "operation": "trendline",
+            "file": null,
+            "pointer": [
+                4,
+                5,
+                6
+            ],
+            "group": "B"
+        }
+    },
+    {
+        "input": "Add a reference line to the pie chart.",
+        "output": {
+            "operation": "reference",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "I need a reference line in the bar chart.",
+        "output": {
+            "operation": "reference",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Harvis, include a reference line for me.",
+        "output": {
+            "operation": "reference",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Put in a reference line here",
+        "output": {
+            "operation": "reference",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Harvis, can you identify and display the maximum value among data points 2, 3, and 4 in group C?",
+        "output": {
+            "operation": "max",
+            "file": null,
+            "pointer": [
+                2,
+                3,
+                4
+            ],
+            "group": "C"
+        }
+    },
+    {
+        "input": "I need a detailed analysis that identifies the max value among data points 2, 3, and 4 in group C",
+        "output": {
+            "operation": "max",
+            "file": null,
+            "pointer": [
+                2,
+                3,
+                4
+            ],
+            "group": "C"
+        }
+    },
+    {
+        "input": "Can you determine the highest value within the entire dataset of group 'york'?",
+        "output": {
+            "operation": "max",
+            "file": null,
+            "pointer": null,
+            "group": "york"
+        }
+    },
+    {
+        "input": "Please analyze all data points in 'york' to identify the max value, and provide a visualization to aid in understanding.",
+        "output": {
+            "operation": "max",
+            "file": null,
+            "pointer": null,
+            "group": "york"
+        }
+    },
+    {
+        "input": "I need you to find the peak value for the two last data points within 'asia', and discuss what this implies.",
+        "output": {
+            "operation": "max",
+            "file": null,
+            "pointer": [
+                -1,
+                -2
+            ],
+            "group": "asia"
+        }
+    },
+    {
+        "input": "I require the max value for the final duo of data points in 'asia' to be identified. Can you elaborate on the outcome?",
+        "output": {
+            "operation": "max",
+            "file": null,
+            "pointer": [
+                -1,
+                -2
+            ],
+            "group": "asia"
+        }
+    },
+    {
+        "input": "Harvis, could you find and display the highest value among the specified odd-numbered data points that less than five?",
+        "output": {
+            "operation": "max",
+            "file": null,
+            "pointer": [
+                1,
+                3,
+                5
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "I'm seeking the max value within data points 1, 3, 5, and 7.",
+        "output": {
+            "operation": "max",
+            "file": null,
+            "pointer": [
+                1,
+                3,
+                5
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "I'd like to see the mean value for all the data. Can you handle that?",
+        "output": {
+            "operation": "mean",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "What is the overall average of our dataset? Please compute and show.",
+        "output": {
+            "operation": "mean",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Can you analyze and provide the mean for the entire collection of data?",
+        "output": {
+            "operation": "mean",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Can you meticulously calculate the mean for all the data points in group 3?",
+        "output": {
+            "operation": "mean",
+            "file": null,
+            "pointer": null,
+            "group": "3"
+        }
+    },
+    {
+        "input": "Harvis, please calculate and show me the average value of all data points within group 3",
+        "output": {
+            "operation": "mean",
+            "file": null,
+            "pointer": null,
+            "group": "3"
+        }
+    },
+    {
+        "input": "I would like a comprehensive analysis resulting in the mean of all data points in group 3, reflecting on the group's overall statistical standpoint.",
+        "output": {
+            "operation": "mean",
+            "file": null,
+            "pointer": null,
+            "group": "3"
+        }
+    },
+    {
+        "input": "I want you to calculate the average for data points one, two, and three in group A, and present the findings in a clear manner.",
+        "output": {
+            "operation": "mean",
+            "file": null,
+            "pointer": [
+                1,
+                2,
+                3
+            ],
+            "group": "A"
+        }
+    },
+    {
+        "input": "Harvis, could you conduct an in-depth calculation of the mean for data points 1, 2, and 3 in group A, and illustrate the impact of this average?",
+        "output": {
+            "operation": "mean",
+            "file": null,
+            "pointer": [
+                1,
+                2,
+                3
+            ],
+            "group": "A"
+        }
+    },
+    {
+        "input": "Harvis, can you find and highlight the minimum value among the first, second, and third data points in group 1?",
+        "output": {
+            "operation": "min",
+            "file": null,
+            "pointer": [
+                1,
+                2,
+                3
+            ],
+            "group": "1"
+        }
+    },
+    {
+        "input": "Evaluate the minimal value for the data points at positions 1, 2, and 3 in group 1",
+        "output": {
+            "operation": "min",
+            "file": null,
+            "pointer": [
+                1,
+                2,
+                3
+            ],
+            "group": "1"
+        }
+    },
+    {
+        "input": "Discover the overall least value in the data points 1, 2, and 3",
+        "output": {
+            "operation": "min",
+            "file": null,
+            "pointer": [
+                1,
+                2,
+                3
+            ],
+            "group": "1"
+        }
+    },
+    {
+        "input": "Ascertain the minimal value within all data points",
+        "output": {
+            "operation": "min",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "I need the lowest value identified from all data",
+        "output": {
+            "operation": "min",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "I'm seeking the minimum value within all data points. Could you calculate this?",
+        "output": {
+            "operation": "min",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Harvis, can you determine the smallest value among the last three data points?",
+        "output": {
+            "operation": "min",
+            "file": null,
+            "pointer": [
+                -1,
+                -2,
+                -3
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "I need the lowest value identified among the final three data points",
+        "output": {
+            "operation": "min",
+            "file": null,
+            "pointer": [
+                -1,
+                -2,
+                -3
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Determine the smallest value found within the last three entries",
+        "output": {
+            "operation": "min",
+            "file": null,
+            "pointer": [
+                -1,
+                -2,
+                -3
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "found the smallest value among the group ABS",
+        "output": {
+            "operation": "min",
+            "file": null,
+            "pointer": null,
+            "group": "ABS"
+        }
+    },
+    {
+        "input": "I want you to check the least bar among the ABS",
+        "output": {
+            "operation": "min",
+            "file": null,
+            "pointer": null,
+            "group": "ABS"
+        }
+    },
+    {
+        "input": "can you point out which one in ABS is smallest?",
+        "output": {
+            "operation": "min",
+            "file": null,
+            "pointer": null,
+            "group": "ABS"
+        }
+    },
+    {
+        "input": "hey, show me the least one among the first,third,fourth and sixth in occn",
+        "output": {
+            "operation": "min",
+            "file": null,
+            "pointer": [
+                1,
+                3,
+                4,
+                6
+            ],
+            "group": "occn"
+        }
+    },
+    {
+        "input": "in occn, summarize the minimal value of 1,3,4,6",
+        "output": {
+            "operation": "min",
+            "file": null,
+            "pointer": [
+                1,
+                3,
+                4,
+                6
+            ],
+            "group": "occn"
+        }
+    }
+]
