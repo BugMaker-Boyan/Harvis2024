@@ -16,8 +16,10 @@ COST_PER_THOUSAND = {
 
 
 def setup_openai(openai_api_key=None, openai_base_url=None):
-    openai.api_key = openai_api_key if openai_api_key else os.getenv("OPENAI_API_KEY")
-    openai.base_url = openai_base_url if openai_base_url else os.getenv("OPENAI_BASE_URL")
+    if openai_api_key:
+        os.environ["OPENAI_API_KEY"] = openai_api_key
+    if openai_base_url:
+        os.environ["OPENAI_BASE_URL"] = openai_base_url
 
 
 def format_prompt(seed_examples, return_messages=False):
