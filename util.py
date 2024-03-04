@@ -13,9 +13,7 @@ class SimilarityUtil:
         old_embeddings = self.model.encode(old_sentences, convert_to_tensor=True)
         new_embeddings = self.model.encode(new_sentences, convert_to_tensor=True)
         cosine_scores = util.cos_sim(new_embeddings, old_embeddings)
-        print(cosine_scores)
         max_cosine_scores, _ = torch.max(cosine_scores, dim=1)
-        print(max_cosine_scores)
         filter_examples = []
         for i in range(len(new_sentences)):
             if max_cosine_scores[i] < threshold:

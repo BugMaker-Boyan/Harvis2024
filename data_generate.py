@@ -6,7 +6,7 @@ import re
 from util import SimilarityUtil
 import argparse
 import random
-import retry
+from retrying import retry
 
 
 COST_PER_THOUSAND = {
@@ -96,7 +96,7 @@ def parse_args():
     )
     parser.add_argument(
         "--generate_size",
-        default=2000,
+        default=20,
         type=int
     )
     parser.add_argument(
@@ -137,6 +137,8 @@ def main(args):
     with open(args.seed_dataset_path, "r", encoding="utf-8") as f:
         all_seed_examples = json.load(f)
     
+    random.shuffle(all_seed_examples)
+    
     generate_dataset = []
     
     setup_openai(args.openai_api_key, args.openai_base_url)
@@ -154,7 +156,7 @@ def main(args):
             format_prompt(seed_examples, return_messages=True),
         )
         
-        total_cost += gpt_res["prompt_tokens"] * COST_PER_THOUSAND[args.model][0] + gpt_res["completion_tokens"] * COST_PER_THOUSAND[args.model][1]
+        total_cost += gpt_res["prompt_tokens"] / 1000 * COST_PER_THOUSAND[args.model][0] + gpt_res["completion_tokens"] / 1000 * COST_PER_THOUSAND[args.model][1]
         
         new_examples = extract_examples(gpt_res["response"])
         if new_examples:
@@ -163,11 +165,12 @@ def main(args):
                 new_examples=new_examples,
                 threshold=args.threshold
             )
+            generate_dataset.extend(filter_examples)
             all_seed_examples.extend(filter_examples)
         with open(args.generate_dataset_path, "w", encoding="utf-8") as f:
-            f.write(json.dumps(all_seed_examples, indent=4))
+            f.write(json.dumps(generate_dataset, indent=4))
         
-        print(f"{len(all_seed_examples)} / {args.generate_size}, select {len(filter_examples)} from {len(new_examples)} examples, GPT cost: {total_cost}")
+        print(f"{len(generate_dataset)} / {args.generate_size}, select {len(filter_examples)} from {len(new_examples)} examples, GPT cost: {total_cost}")
 
 if __name__ == "__main__":
     args = parse_args()

@@ -1,0 +1,290 @@
+[
+    {
+        "input": "Create a reference line for the first 10 data points",
+        "output": {
+            "operation": "reference",
+            "file": null,
+            "pointer": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Create a reference line for the even-numbered data points in the ocean file",
+        "output": {
+            "operation": "reference",
+            "file": "ocean",
+            "pointer": [
+                0,
+                2,
+                4,
+                6,
+                8
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Create a reference line for the first 15 data points in the sunshine group",
+        "output": {
+            "operation": "reference",
+            "file": null,
+            "pointer": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14
+            ],
+            "group": "sunshine"
+        }
+    },
+    {
+        "input": "I need to highlight the first and last columns of my data table.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                0,
+                -1
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "I want to create a new group using the data from 'sales.csv' with the first 10 data points.",
+        "output": {
+            "operation": "create",
+            "file": "sales.csv",
+            "pointer": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "I would like to highlight the 5th and 6th rows of my data table.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                4,
+                5
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Create a new group using the data from 'temperature.csv' with all the data points.",
+        "output": {
+            "operation": "create",
+            "file": "temperature.csv",
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Highlight the 5th, 8th, and 10th data points in the chart",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                4,
+                7,
+                9
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Display the distribution of the 'sales' dataset on the chart",
+        "output": {
+            "operation": "encodings",
+            "file": "sales",
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "I need to extend the data with the first, third, and fifth numbers from the 'finance' group in file 'quarterly_reports.csv'.",
+        "output": {
+            "operation": "extend",
+            "file": "quarterly_reports.csv",
+            "pointer": [
+                0,
+                2,
+                4
+            ],
+            "group": "finance"
+        }
+    },
+    {
+        "input": "Highlight the outliers in the scatterplot for group B, using the data from scatter.csv.",
+        "output": {
+            "operation": "highlight",
+            "file": "scatter.csv",
+            "pointer": null,
+            "group": "B"
+        }
+    },
+    {
+        "input": "Highlight the anomalies in the pie chart for group D, using the data from pie.csv.",
+        "output": {
+            "operation": "highlight",
+            "file": "pie.csv",
+            "pointer": null,
+            "group": "D"
+        }
+    },
+    {
+        "input": "Show me the encodings for the entire dataset.",
+        "output": {
+            "operation": "encodings",
+            "file": null,
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "Show me the encodings for the file \"data_set_2.csv\".",
+        "output": {
+            "operation": "encodings",
+            "file": "data_set_2.csv",
+            "pointer": null,
+            "group": null
+        }
+    },
+    {
+        "input": "\"Extend the visualization to include all available data in the 'trends.xlsx' file for the 'quarterly' group.\"",
+        "output": {
+            "operation": "extend",
+            "file": "trends.xlsx",
+            "pointer": null,
+            "group": "quarterly"
+        }
+    },
+    {
+        "input": "I want you to highlight the first and last data points in the 'sales.csv' file.",
+        "output": {
+            "operation": "highlight",
+            "file": "sales.csv",
+            "pointer": [
+                0,
+                -1
+            ],
+            "group": null
+        }
+    },
+    {
+        "input": "Please highlight the 2nd and 3rd data points in the 'expenses.csv' file for group 'expenses'.",
+        "output": {
+            "operation": "highlight",
+            "file": "expenses.csv",
+            "pointer": [
+                1,
+                2
+            ],
+            "group": "expenses"
+        }
+    },
+    {
+        "input": "Highlight the first 5 data points in the 'ocean' group on the scatter plot.",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "group": "ocean"
+        }
+    },
+    {
+        "input": "I need to highlight the third, fifth, and seventh data points in the chart for the 'A' group",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                2,
+                4,
+                6
+            ],
+            "group": "A"
+        }
+    },
+    {
+        "input": "Create a reference line for the last 20 data points in the rainfall group",
+        "output": {
+            "operation": "reference",
+            "file": null,
+            "pointer": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+            ],
+            "group": "rainfall"
+        }
+    },
+    {
+        "input": "Highlight the 10th, 20th, and 30th data points in the air quality group",
+        "output": {
+            "operation": "highlight",
+            "file": null,
+            "pointer": [
+                9,
+                19,
+                29
+            ],
+            "group": "air quality"
+        }
+    }
+]
