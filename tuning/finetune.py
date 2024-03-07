@@ -5,13 +5,14 @@ import argparse
 
 
 MODEL_REPO_MAPPING = {
-    "llama2-7b": "/hpc2hdd/home/boyanli/jhaidata/huggingface_models/Llama-2-7b-hf"
+    "llama2-7b": "/home/liboyan/docker_workspace/hf_models/llama-2-7b"
 }
 
 DATASETS_DATA_MAPPING = {
     "havis": {
         "train": "data/train_dataset.json",
-        "test": "data/test_dataset.json"
+        "validation": "data/dev_dataset.json",
+        "test": "data/seed_dataset.json"
     }
 }
 
@@ -33,7 +34,7 @@ def process_func(example, tokenizer):
     INPUT_TEMPLATE = "INSTRUCTION: {}\n"
     OUTPUT_TEMPLATE = "RESPONSE: {}"
     instruction = tokenizer(INPUT_TEMPLATE.format(example["input"].strip()), add_special_tokens=False)
-    example_output = str(example["output"]).repalce("\n", "").strip()
+    example_output = str(example["output"]).replace("\n", "").strip()
     response = tokenizer(OUTPUT_TEMPLATE.format(example_output), add_special_tokens=False)
     input_ids = instruction["input_ids"] + response["input_ids"] + [tokenizer.eos_token_id]
     attention_mask = instruction["attention_mask"] + response["attention_mask"] + [1]
@@ -60,9 +61,9 @@ def train(model_name, datasets_name):
     tokenized_ds = load_datasets(datasets_name, tokenizer)
     args = TrainingArguments(
         output_dir=f"./checkpoint/{model_name}_{datasets_name}",
-        per_device_train_batch_size=8,
+        per_device_train_batch_size=16,
         gradient_accumulation_steps=2,
-        logging_steps=10,
+        logging_steps=1,
         num_train_epochs=3,
         max_grad_norm=1.0,
         learning_rate=1e-5,
@@ -72,7 +73,8 @@ def train(model_name, datasets_name):
         fp16=False,
         lr_scheduler_type="cosine",
         adam_epsilon=1e-5,
-        seed=42
+        seed=42,
+        report_to=["tensorboard"]
     )
     trainer = Trainer(
         args=args,

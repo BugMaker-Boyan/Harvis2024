@@ -1,0 +1,230 @@
+{"operation":"create", "file":"data.csv", "pointer":null, "group":null}
+Harvis, generate a new set of bars in the bar chart using data from 'data.csv'. | All data groups include ["DEFAULT_GROUP"].
+create a another group of line to the chart, the data is in 'data.csv'. | All data groups include ["DEFAULT_GROUP"].
+visualize the information in data.csv and draw out the points. | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"create", "file":"stocks.csv", "pointer":null, "group":"2"}
+Use the data from 'stocks.csv' to build another group of points in my scatter plot, group number should in 2. | All data groups include ["1", "2"].
+I want to visualize the group 2 data in stocks.csv, help me with that. | All data groups include ["1", "2"].
+
+{"operation":"create", "file":"flightaffim.csv", "pointer":null, "group":"flight"}
+Create and display a new batch of bars in the bar chart for flight, derived from 'flightaffim.csv'. | All data groups include ["flight", "time", "cars", "burgers"].
+Integrate a new set of points into the scatter plot for flight from 'flightaffim.csv'. | All data groups include ["flight", "time", "cars", "burgers"].
+I need you to transfer the data in 'flightaffim.csv' into a new data line, group named flight. | All data groups include ["flight", "time", "cars", "burgers"].
+
+{"operation":"create", "file":"123.csv", "pointer":null, "group": null}
+Develop additional bars in the bar chart using data from csv 123. | All data groups include ["DEFAULT_GROUP"].
+Harvis, draw a fresh data line in the line chart based on file 123. | All data groups include ["DEFAULT_GROUP"].
+Expand the scatter plot with detailed points from 123.csv. | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"encodings", "file":null, "pointer":null, "group":"B"}
+can you display the data numbers of group B for me? | All data groups include ["A", "B"].
+I need to know the numbers of group B. | All data groups include ["A", "B"].
+
+{"operation":"encodings", "file":null, "pointer":null, "group":null}
+I need the numerical details of our data points explicitly shown on the chart. | All data groups include ["A, B, C"].
+take the raw numbers of our dataset and put them on my chart. | All data groups include ["A, B, C"].
+Harvis, can you visually outline the exact values for our data points on the chart? | All data groups include ["A, B, C"].
+
+{"operation":"encodings", "file":null, "pointer":null, "group":"1"}
+Illustrate the exact numerical data for group 1 on the chart. | All data groups include ["1"].
+Visualize the actual figures for each data point in group 1 on the chart. | All data groups include ["1"].
+I'm looking for a detailed numerical representation of group 1's data on the chart, with each value accurately displayed. | All data groups include ["1"].
+
+{"operation":"encodings", "file":null, "pointer":null, "group":"adamast"}
+Display the exact numerical details of group adamast's dataset on the chart. | All data groups include ["adamast"].
+Show the detailed figures for each of adamast's data points on the chart. | All data groups include ["adamast"].
+Present the numerical encodings for group adamast directly on the chart. | All data groups include ["adamast"].
+you encode the direct values of adamast's data numerically for me. | All data groups include ["adamast"].
+
+{"operation":"extend", "file":"extend.csv", "pointer":[1,2], "group":null}
+I want you to do a visualization extension with the first two data points in extend csv. | All data groups include ["eriuak"].
+show me the extension of this data line with the first two data from extend.csv file. | All data groups include ["eriuak"].
+
+{"operation":"extend", "file":"seavisin1902.csv", "pointer":[2,3,4], "group":"B"}
+can you do a visualize extension for me from group B, indices 2, 3, and 4 in seavisin1902.csv? | All data groups include ["A","B","C"].
+Use the second to fourth number of B in csv file seavisin1902 to extend my chart. | All data groups include ["A","B","C"].
+
+{"operation":"extend", "file":"extend.csv", "pointer":[1,2,4,6], "group":"numberA"}
+I will ask you to extend this barchart with the first two, four,six data in numberA group, Use extend.csv file. | All data groups include ["numberA"].
+
+{"operation":"extend", "file":"floews.txt", "pointer":null, "group":null}
+Update the bar chart with a complete set of data from the txt file floews. | All data groups include ["DEFAULT_GROUP"].
+Enrich data visualizations with all data from txt floews. | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"extend", "file":"data_add.csv", "pointer":null, "group":"1"}
+Harvis, extend group 1's bar chart with all new bars from data_add.csv. | All data groups include ["1", "month", "year"].
+Update the bar chart for group '1' with a complete set of data from data_add csv. | All data groups include ["1", "month", "year"].
+Harvis, scatter all the data point for 'group 1' from csv file data_add. | All data groups include ["1", "month", "year"].
+
+{"operation":"extend", "file":"newplanes.csv", "pointer":[2,4,5], "group":null}
+add some new points for me with the second, fourth and fifth lines in file newplanes. | All data groups include ["333"].
+I need you to draw some extension bars with data from newplanes.csv, which are second, fourth and fifth. | All data groups include ["333"].
+
+{"operation":"extend", "file":"1986.csv", "pointer":[1], "group":"1"}
+I want to show the group 1's first data point in the csv file 1986 as my extension for this chart. | All data groups include ["1", "2"].
+just use the head data in 1 group of 1986.csv to do a extension for my chart. | All data groups include ["1", "2"].
+
+{"operation":"extend", "file":"2233iris.txt", "pointer":[-1,-2], "group":"1"}
+can you see the last data two data points of group 1 in txtfile 2233iris? Use them to enhance my chart. | All data groups include ["1"].
+put a extension visualization on my scatter plot, you can pick the data in 2233iris.txt file in group 1, the last two points. | All data groups include ["1"].
+
+{"operation":"extend", "file":"hongkong.csv", "pointer":[-3,2], "group":"1"}
+with the third to last and second data in group 1 in hongkong.csv, draw additional bars for me. | All data groups include ["1"].
+I'm gonna do a extend for my linechart, get the data of second and last third in group 1, filename called hongkong.csv and put it on my chart. | All data groups include ["1"].
+
+{"operation":"highlight", "file":null, "pointer":[4,5], "group":null}
+Use different colors to emphasize the fourth and fifth points in this line chart. | All data groups include ["DEFAULT_GROUP"].
+I need line four and five to be highlighted on this visualization. | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"highlight", "file":null, "pointer":[-1,-2], "group":null}
+Please highlight the last two data points on this chart. | All data groups include ["eng"].
+I want the last two lines on this line chart to be highlighted. | All data groups include ["eng"].
+Please highlight the last two data points on the scatter plot for better visibility. | All data groups include ["eng"].
+
+{"operation":"highlight", "file":null, "pointer":[-1,-2,1,2], "group":null}
+I want to see the first and the last two data points more clearly. | All data groups include ["DEFAULT_GROUP"].
+can you highlight the first, second, last, second last bar for me? | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"highlight", "file":null, "pointer":[1,3,4,7], "group":null}
+Mark out the first, third, fourth, and seventh data points for me, I need to see them more clearly. | All data groups include ["DEFAULT_GROUP"].
+Use contrasting colors to highlight the first, third, fourth, and seventh data points. | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"highlight", "file":null, "pointer":null, "group":null}
+Highlight all data points on this chart for comprehensive analysis. | All data groups include ["lalala"].
+Make all lines in this line chart stand out by highlighting them. | All data groups include ["lalala"].
+
+{"operation":"highlight", "file":null, "pointer":[1,2,3,4,5], "group":null}
+I need the first five data points to be highlighted on this visualization. | All data groups include ["1"].
+Make the first through fifth lines in this line chart more visible. | All data groups include ["1"].
+Please draw attention to the first five data points by highlighting them. | All data groups include ["1"].
+
+{"operation":"highlight", "file":null, "pointer":[-2,1,3], "group":null}
+make the second last, the first and the third bar shown clearer. | All data groups include ["DEFAULT_GROUP"].
+can you mark out the indices -2, 1, 3 bar for me? | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"highlight", "file":null, "pointer":[3], "group":null}
+Make the third data point stand out. | All data groups include ["DEFAULT_GROUP"].
+Accentuate the third point. | All data groups include ["DEFAULT_GROUP"].
+Spotlight bar three. | All data groups include ["DEFAULT_GROUP"].
+Point out the third data point. | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"highlight", "file":null, "pointer":[2,5,6], "group":null}
+I need the second, fifth, and sixth data points to stand out on this visualization. | All data groups include ["DEFAULT_GROUP"].
+Emphasize the second, fifth, and sixth points in this line chart using different colors. | All data groups include ["DEFAULT_GROUP"].
+Could you mark the presence of the second, fifth, and sixth data points on this scatter plot? | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"highlight", "file":null, "pointer":null, "group":"A"}
+Mark out all data points in group A to highlight the entire dataset. | All data groups include ["A", "CARS", "JAPAN"].
+Use a distinct color to highlight all data points in group A. | All data groups include ["A", "CARS", "JAPAN"].
+Illuminate all data points in group A to highlight the comprehensive nature of the dataset. | All data groups include ["A", "CARS", "JAPAN"]..
+Apply a highlighting effect to all data points in group A to visualize the entire dataset. | All data groups include ["A", "CARS", "JAPAN"]..
+
+{"operation":"highlight", "file":null, "pointer":[1,2,3], "group":"A"}
+Use a distinctive marker to highlight the first second third data points in group A for clarity. | All data groups include ["A"].
+Emphasize the initial three data points in group A by highlighting them for clarity. | All data groups include ["A"].
+Display the first,second and third data points within group star with a highlighting effect for emphasis. | All data groups include ["A"].
+
+{"operation":"highlight", "file":null, "pointer":[2,3,6,7], "group":"C"}
+Spotlight the second to third and sixth to seventh data points in C on the line chart. | All data groups include ["C"].
+Mark the second to third, sixth, and seventh data points in C group on the pie chart for emphasis. | All data groups include ["C"].
+
+{"operation":"trendline", "file":null, "pointer":null, "group":null}
+calculate a linear regression for me. | All data groups include ["DEFAULT_GROUP"].
+Please summarize the trend of this chart by drawing a trendline. | All data groups include ["DEFAULT_GROUP"].
+Display the overall trend of these data points using a trendline. | All data groups include ["DEFAULT_GROUP"].
+I'd like to see the trendline representing the trend of this chart. | All data groups include ["DEFAULT_GROUP"].
+I need to see the trendline representing the trend of this chart. | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"trendline", "file":null, "pointer":null, "group":"mirage"}
+Generate a trendline summarizing the overall trend of the mirage group. | All data groups include ["dust", "mirage", "italy"].
+I need to see the linear regression line representing the trend of all data in the mirage group. | All data groups include ["dust", "mirage", "italy"].
+Could you do a linear regression for mirage group? | All data groups include ["dust", "mirage", "italy"].
+
+{"operation":"trendline", "file":null, "pointer":[1,2,3], "group":null}
+Please show the linear regression line summarizing the trend of the top three lines. | All data groups include ["DEFAULT_GROUP"].
+Draw a trendline to visualize the trend of the first to third bars. | All data groups include ["DEFAULT_GROUP"].
+Summarize the trendline for the first three bars. | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"trendline", "file":null, "pointer":[-2,-3], "group":null}
+Could you generate a trendline summarizing the trend of the second and third from the last data points? | All data groups include ["DEFAULT_GROUP"].
+Show the linear regression line representing the trend of the second and third from the last data points. | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"trendline", "file":null, "pointer":[1,3,5,7], "group":null}
+Calculate a trendline summarizing the first, third, fifth, and seventh points. | All data groups include ["DEFAULT_GROUP"].
+Generate a trendline for data points that are odd-numbered and no bigger than seven. | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"trendline","file":null, "pointer":null, "group":"mirage"}
+Generate a trendline summarizing the trend of the mirage group. | All data groups include ["mirage"].
+Calculate a trendline representing the overall trend of the mirage group in the line chart. | All data groups include ["mirage"].
+Draw a trendline for all data points in the mirage group. | All data groups include ["mirage"].
+
+{"operation":"trendline", "file":null, "pointer":[4,5,6], "group":"B"}
+Can you draw a line indicating the trend of points 4 through 6 in group B? | All data groups include ["B"].
+Harvis, I need a trend overview for points 4 to 6 in group B. | All data groups include ["B"].
+
+{"operation":"reference", "file":null, "pointer":null, "group":null}
+Add a reference line to the pie chart. | All data groups include ["DEFAULT_GROUP"].
+I need a reference line in the bar chart. | All data groups include ["DEFAULT_GROUP"].
+Harvis, include a reference line for me. | All data groups include ["DEFAULT_GROUP"].
+"ut in a reference line here | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"max", "file":null, "pointer":[2,3,4], "group":"C"}
+Harvis, can you identify and display the maximum value among data points 2, 3, and 4 in group C? | All data groups include ["C"].
+I need a detailed analysis that identifies the max value among data points 2, 3, and 4 in group C | All data groups include ["C"].
+
+{"operation":"max", "file":null, "pointer":null,"group":"york"}
+Can you determine the highest value within the entire dataset of group york? | All data groups include ["york"].
+Please analyze all data points in york to identify the max value, and provide a visualization to aid in understanding. | All data groups include ["york"].
+
+{"operation":"max", "file":null, "pointer":[-1,-2], "group":"asia"}
+I need you to find the peak value for the two last data points within asia, and discuss what this implies. | All data groups include ["asia", "people"].
+I require the max value for the final duo of data points in asia to be identified. Can you elaborate on the outcome? | All data groups include ["asia", "people"].
+
+{"operation":"max", "file":null, "pointer":[1,3,5], "group":null}
+Harvis, could you find and display the highest value among the specified odd-numbered data points that less than or equal to five? | All data groups include ["DEFAULT_GROUP"].
+I'm seeking the max value within data points 1, 3, 5. | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"mean", "file":null, "pointer":null, "group":null}
+I'd like to see the mean value for all the data. Can you handle that? | All data groups include ["DEFAULT_GROUP"].
+What is the overall average of our dataset? Please compute and show. | All data groups include ["DEFAULT_GROUP"].
+Can you analyze and provide the mean for the entire collection of data? | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"mean", "file":null, "pointer":null, "group":"3"}
+Can you meticulously calculate the mean for all the data points in group 3? | All data groups include ["7", "as", "3", "4"].
+Harvis, please calculate and show me the average value of all data points within group 3. | All data groups include ["7", "as", "3", "4"].
+I would like a comprehensive analysis resulting in the mean of all data points in group 3, reflecting on the group's overall statistical standpoint. | All data groups include ["7", "as", "3", "4"].
+
+{"operation":"mean", "file":null, "pointer":[1,2,3], "group":"A"}
+I want you to calculate the average for data points one, two, and three in group A, and present the findings in a clear manner. | All data groups include ["A"].
+Harvis, could you conduct an in-depth calculation of the mean for data points 1, 2, and 3 in group A, and illustrate the impact of this average? | All data groups include ["A"].
+
+{"operation":"min", "file":null, "pointer":[1,2,3], "group":"1"}
+Harvis, can you find and highlight the minimum value among the first, second, and third data points in group 1? | All data groups include ["1"].
+Evaluate the minimal value for the data points at positions 1, 2, and 3 in group 1. | All data groups include ["1"].
+Discover the overall least value in the data points 1, 2, and 3. | All data groups include ["1"].
+
+{"operation":"min", "file":null, "pointer":null, "group":null}
+Ascertain the minimal value within all data points. | All data groups include ["1"].
+I need the lowest value identified from all data. | All data groups include ["1"].
+I'm seeking the minimum value within all data points. Could you calculate this? | All data groups include ["1"].
+
+{"operation":"min", "file":null, "pointer":[-1,-2,-3], "group":null}
+Harvis, can you determine the smallest value among the last three data points? | All data groups include ["DEFAULT_GROUP"].
+I need the lowest value identified among the final three data points. | All data groups include ["DEFAULT_GROUP"].
+Determine the smallest value found within the last three entries. | All data groups include ["DEFAULT_GROUP"].
+
+{"operation":"min", "file":null, "pointer":null, "group":"ABS"}
+found the smallest value among the group ABS. | All data groups include ["C","ABS"].
+I want you to check the least bar among the ABS. | All data groups include ["C","ABS"].
+can you point out which one in ABS is smallest? | All data groups include ["C","ABS"].
+
+{"operation":"min", "file":null, "pointer":[1,3,4,6], "group":"occn"}
+hey, show me the least one among the first,third,fourth and sixth in occn. | All data groups include ["oocn"].
+in occn, summarize the minimal value of 1,3,4,6. | All data groups include ["oocn"].
+
+{"operation": "rollback", "file":null, "pointer":null, "group":null}
+Withdraw the operation you have done before. | All data groups include ["DEFAULT_GROUP"].
+I don't like the chart you generated for me, cancel it. | All data groups include ["DEFAULT_GROUP"].
+Can you return to the step before? | All data groups include ["DEFAULT_GROUP"].
+

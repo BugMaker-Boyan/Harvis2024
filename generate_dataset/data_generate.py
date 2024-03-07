@@ -24,11 +24,11 @@ def setup_openai(openai_api_key=None, openai_base_url=None):
 
 def format_prompt(seed_examples, return_messages=False):
     example_list = []
-    valid_operations = set([example["output"]["operation"] for example in seed_examples])
+    valid_operations = set([json.loads(example["output"])["operation"] for example in seed_examples])
     for example in seed_examples:
         format_example = EXAMPLE_TEMPLATE.format(
             INPUT=example["input"].strip(),
-            OUTPUT=json.dumps(example["output"]).replace("\n", "").strip()
+            OUTPUT=example["output"].strip()
         ).strip()
         example_list.append(format_example)
     
@@ -36,6 +36,8 @@ def format_prompt(seed_examples, return_messages=False):
         VALID_OPERATIONS=", ".join(valid_operations),
         EXAMPLES="\n\n".join(example_list)
     )
+    
+    print(prompt)
     
     if return_messages:
         return [{"role": "user", "content": prompt}]
@@ -54,7 +56,6 @@ def _ask_chat_retry_condition(exception):
     wait_fixed=2000,
     retry_on_exception=_ask_chat_retry_condition
 )
-
 def ask_chat(client, model, messages: list, temperature=0.7, max_tokens=512):
     response = client.chat.completions.create(
         model=model,
@@ -71,6 +72,37 @@ def ask_chat(client, model, messages: list, temperature=0.7, max_tokens=512):
     )
 
 
+def is_valid(data_json):        
+    
+    def is_operation_valid(operation):
+        return isinstance(operation, str) and operation in ("create", "encodings", "extend", "highlight", "trendline", "reference", "max", "mean", "min")
+    
+    def is_file_valid(file):
+        return file is None or isinstance(file, str)
+
+    def is_pointer_valid(pointer):
+        if pointer is None:
+            return True
+        if not isinstance(pointer, list):
+            return False
+        all_integers_flag = True
+        for idx in pointer:
+            if not isinstance(idx, int):
+                all_integers_flag = False
+                break
+        return all_integers_flag
+    
+    def is_group_valid(group):
+        return group is None or isinstance(group, str)
+    
+    OUTPUT = data_json["output"]
+
+    if set(OUTPUT.keys()) != set(["operation", "file", "pointer", "group"]):
+        return False
+    
+    return is_operation_valid(OUTPUT["operation"]) and is_file_valid(OUTPUT["file"]) and is_pointer_valid(OUTPUT["pointer"]) and is_group_valid(OUTPUT["group"])
+
+
 def extract_examples(response):
     pattern = r"\d+\.\s*INPUT:\s*(.*?)\nOUTPUT:\s*(\{.*?\})(?=\n*)"
     response = "1. INPUT: " + response
@@ -79,11 +111,13 @@ def extract_examples(response):
     for pair_input, pair_output in all_pairs:
         try:
             output = json.loads(pair_output)
+            if not is_valid(output):
+                continue
         except:
             continue
         examples.append({
             "input": pair_input,
-            "output": output
+            "output": json.dumps(output).replace("\n", "").strip()
         })
     return examples
 
@@ -98,12 +132,12 @@ def parse_args():
     )
     parser.add_argument(
         "--generate_size",
-        default=20,
+        default=10000,
         type=int
     )
     parser.add_argument(
         "--seed_example_num",
-        default=3,
+        default=5,
         type=int
     )
     parser.add_argument(
@@ -113,12 +147,12 @@ def parse_args():
     )
     parser.add_argument(
         "--generate_dataset_path",
-        default="./generate_dataset.json",
+        default="./data/generate_dataset.json",
         type=str
     )
     parser.add_argument(
         "--seed_dataset_path",
-        default="./seed_dataset.json",
+        default="./data/seed_data.json",
         type=str
     )
     parser.add_argument(
