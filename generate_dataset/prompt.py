@@ -1,25 +1,20 @@
 EXAMPLE_TEMPLATE = """
 INPUT: {INPUT}
+GROUP: {GROUP}
 OUTPUT: {OUTPUT}
 """
 
 
-PROMPT_TEMPLATE = """
+PROMPT_TEMPLATE = """Generate 5 new examples following specific rules and the OUTPUT must be in valid JSON format that can be parsed.
 
-Generate 10 new examples following specific rules and the OUTPUT must be in valid JSON format that can be parsed. Try to make the INPUT in new examples more varied and colorful.
+The keys in OUTPUT:
+"operations": The operation to do in INPUT, must be one of ({VALID_OPERATIONS}). It is a string.                                        
+"file": The concrete file name mentioned in INPUT, or null if it is not. It is a string or null.
+"pointer": A list of integers to data row index (starting from 1 from begin, or starting from -1 from last) to operate, which is mentioned in INPUT. Note that each index should be included in list, do not use slice. Negative integers indicate counting from the last. null is set when not needed or by default meaning all data rows. It is a list of integers or null.
+"group": The concrete group name when needed, which must be one of GROUP list. It is null if not needed even if GROUP list is not empty. It is a string or null.
 
-"operations": The operation to do, must be one of ({VALID_OPERATIONS}). It is a string.
-                                                   
-"file": The concrete file name when mentioned, or null if it is not needed. It is a string or null.
-
-"pointer": A list of integers to data row index (starting from 1 from begin, or starting from -1 from last)  to operate. Note that each index should be included in list, do not use slice. Negative integers indicate counting from the last. null is set when not needed or by default meaning all data. It is a list of integers or null.
-    
-"group": The concrete group name when needed, or null if not mentioned. It is a string or null.
-
-Note that, the size of pointer list (if exists) in new examples should be no more than 15.
-
+Examples:
 {EXAMPLES}
 
 New Examples:
-1. INPUT: 
-"""
+1. INPUT: """

@@ -14,8 +14,13 @@ for newline_idx in newline_index:
     output = json.loads(data_group[0])
     nl_input = data_group[1:]
     for nl in nl_input:
+        nl, group = nl.split("| All data groups include")
+        nl = nl.strip()
+        group = eval(group.replace(".", "").strip())
+        group = group if group != ["DEFAULT_GROUP"] else []
         data_json.append({
-            "input": nl.strip(),
+            "input": nl,
+            "group": json.dumps(group).replace("\n", "").strip(),
             "output": json.dumps(output).replace("\n", "").strip()
         })
     previous_idx = newline_idx + 1

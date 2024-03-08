@@ -28,6 +28,7 @@ def format_prompt(seed_examples, return_messages=False):
     for example in seed_examples:
         format_example = EXAMPLE_TEMPLATE.format(
             INPUT=example["input"].strip(),
+            GROUP=example["group"].strip(),
             OUTPUT=example["output"].strip()
         ).strip()
         example_list.append(format_example)
@@ -36,8 +37,6 @@ def format_prompt(seed_examples, return_messages=False):
         VALID_OPERATIONS=", ".join(valid_operations),
         EXAMPLES="\n\n".join(example_list)
     )
-    
-    print(prompt)
     
     if return_messages:
         return [{"role": "user", "content": prompt}]
@@ -56,7 +55,7 @@ def _ask_chat_retry_condition(exception):
     wait_fixed=2000,
     retry_on_exception=_ask_chat_retry_condition
 )
-def ask_chat(client, model, messages: list, temperature=0.7, max_tokens=512):
+def ask_chat(client, model, messages: list, temperature=1.0, max_tokens=512):
     response = client.chat.completions.create(
         model=model,
         messages=messages,
@@ -72,7 +71,7 @@ def ask_chat(client, model, messages: list, temperature=0.7, max_tokens=512):
     )
 
 
-def is_valid(data_json):        
+def is_output_valid(output_json):        
     
     def is_operation_valid(operation):
         return isinstance(operation, str) and operation in ("create", "encodings", "extend", "highlight", "trendline", "reference", "max", "mean", "min")
@@ -94,31 +93,48 @@ def is_valid(data_json):
     
     def is_group_valid(group):
         return group is None or isinstance(group, str)
-    
-    OUTPUT = data_json["output"]
 
-    if set(OUTPUT.keys()) != set(["operation", "file", "pointer", "group"]):
+    if set(output_json.keys()) != set(["operation", "file", "pointer", "group"]):
         return False
     
-    return is_operation_valid(OUTPUT["operation"]) and is_file_valid(OUTPUT["file"]) and is_pointer_valid(OUTPUT["pointer"]) and is_group_valid(OUTPUT["group"])
+    return is_operation_valid(output_json["operation"]) and is_file_valid(output_json["file"]) and is_pointer_valid(output_json["pointer"]) and is_group_valid(output_json["group"])
 
+
+def is_group_valid(group_json, output_json):
+    all_strings_flag = True
+    for g in group_json:
+        if not isinstance(g, str):
+            all_strings_flag = False
+            break
+    if not all_strings_flag:
+        return False
+    else:
+        if output_json["group"] is None:
+            return True
+        else:
+            return output_json["group"] in group_json
 
 def extract_examples(response):
-    pattern = r"\d+\.\s*INPUT:\s*(.*?)\nOUTPUT:\s*(\{.*?\})(?=\n*)"
+    pattern = r"\d+\.\s*INPUT:\s*(.*?)\nGROUP:\s*(\[.*?\])\nOUTPUT:\s*(\{.*?\})(?=\n*)"
     response = "1. INPUT: " + response
-    all_pairs = re.findall(pattern, response)
+    all_matches = re.findall(pattern, response)
     examples = []
-    for pair_input, pair_output in all_pairs:
+    for match_input, match_group, match_output in all_matches:
         try:
-            output = json.loads(pair_output)
-            if not is_valid(output):
+            output_json = json.loads(match_output)
+            group_json = json.loads(match_group)
+            sample = {
+                "input": match_input,
+                "group": json.dumps(group_json).replace("\n", "").strip(),
+                "output": json.dumps(output_json).replace("\n", "").strip()
+            }
+            if not is_output_valid(output_json):
                 continue
-        except:
+            if not is_group_valid(group_json, output_json):
+                continue
+        except Exception as e:
             continue
-        examples.append({
-            "input": pair_input,
-            "output": json.dumps(output).replace("\n", "").strip()
-        })
+        examples.append(sample)
     return examples
 
 
@@ -137,7 +153,7 @@ def parse_args():
     )
     parser.add_argument(
         "--seed_example_num",
-        default=5,
+        default=3,
         type=int
     )
     parser.add_argument(
@@ -191,7 +207,6 @@ def main(args):
             args.model,
             format_prompt(seed_examples, return_messages=True),
         )
-        
         total_cost += gpt_res["prompt_tokens"] / 1000 * COST_PER_THOUSAND[args.model][0] + gpt_res["completion_tokens"] / 1000 * COST_PER_THOUSAND[args.model][1]
         
         new_examples = extract_examples(gpt_res["response"])
@@ -203,6 +218,8 @@ def main(args):
             )
             generate_dataset.extend(filter_examples)
             all_seed_examples.extend(filter_examples)
+        else:
+            filter_examples = []
         with open(args.generate_dataset_path, "w", encoding="utf-8") as f:
             f.write(json.dumps(generate_dataset, indent=4))
         
