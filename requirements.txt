@@ -5,3 +5,5 @@ sentence-transformers
 transformers
 datasets
 accelerate
+tensorboard
+tensorboardX

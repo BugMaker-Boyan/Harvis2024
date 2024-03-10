@@ -14,9 +14,9 @@ DATASETS_DATA_MAPPING = {
 MAX_LENGTH = 2048
 
 
-def load_model(model_name_or_path):
-    tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
-    model = AutoModelForCausalLM.from_pretrained(model_name_or_path, torch_dtype=torch.float16, device_map="auto")
+def load_model(model_name):
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_REPO_MAPPING[model_name])
+    model = AutoModelForCausalLM.from_pretrained(MODEL_REPO_MAPPING[model_name], torch_dtype=torch.float16, device_map="auto")
     print(tokenizer.special_tokens_map)
     tokenizer.padding_side = "right"
     tokenizer.pad_token = tokenizer.eos_token
@@ -26,10 +26,11 @@ def load_model(model_name_or_path):
 
 def process_func(example, tokenizer):
     input_ids, attention_mask, labels = [], [], []
-    INPUT_TEMPLATE = "INPUT: {}\nGROUP: {}\nOUTPUT: "
-    OUTPUT_TEMPLATE = "{}"
-    instruction = tokenizer(INPUT_TEMPLATE.format(example["input"].strip(), example["group"].strip()), add_special_tokens=False)
-    response = tokenizer(OUTPUT_TEMPLATE.format(example["output"].strip()), add_special_tokens=False)
+    INPUT_TEMPLATE = "INSTRUCTION: {}\n"
+    OUTPUT_TEMPLATE = "RESPONSE: {}"
+    instruction = tokenizer(INPUT_TEMPLATE.format(example["input"].strip()), add_special_tokens=False)
+    example_output = str(example["output"]).replace("\n", "").strip()
+    response = tokenizer(OUTPUT_TEMPLATE.format(example_output), add_special_tokens=False)
     input_ids = instruction["input_ids"] + response["input_ids"] + [tokenizer.eos_token_id]
     attention_mask = instruction["attention_mask"] + response["attention_mask"] + [1]
     labels = [-100] * len(instruction["input_ids"]) + response["input_ids"] + [tokenizer.eos_token_id]
@@ -50,27 +51,20 @@ def load_datasets(datasets_name, tokenizer):
     return tokenized_ds
 
 
-def train(model_name_or_path, datasets_name):
-    tokenizer, model = load_model(model_name_or_path)
+def train(model_name, datasets_name):
+    tokenizer, model = load_model(model_name)
     tokenized_ds = load_datasets(datasets_name, tokenizer)
     args = TrainingArguments(
-        output_dir=f"./checkpoint",
-        per_device_train_batch_size=32,
-        per_device_eval_batch_size=64,
+        output_dir=f"./checkpoint/{model_name}_{datasets_name}",
+        per_device_train_batch_size=16,
         gradient_accumulation_steps=2,
-        logging_steps=10,
+        logging_steps=1,
         num_train_epochs=3,
         max_grad_norm=1.0,
         learning_rate=1e-5,
-        save_safetensors=True,
-        evaluation_strategy="steps",
-        eval_steps=50,
-        save_strategy="steps",
-        save_steps=50,
-        save_total_limit=2,
-        load_best_model_at_end=True,
+        save_strategy="epoch",
+        save_total_limit=1,
         metric_for_best_model="eval_loss",
-        greater_is_better=False,
         bf16=True,
         fp16=False,
         lr_scheduler_type="cosine",
@@ -82,7 +76,6 @@ def train(model_name_or_path, datasets_name):
         args=args,
         model=model,
         train_dataset=tokenized_ds["train"],
-        eval_dataset=tokenized_ds["validation"],
         data_collator=DataCollatorForSeq2Seq(tokenizer=tokenizer, padding=True)
     )
     trainer.train()
@@ -91,9 +84,9 @@ def train(model_name_or_path, datasets_name):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Havis-Llama script')
 
-    parser.add_argument('--model_name_or_path', default="meta-llama/Llama-2-7b-hf",type=str)
-    parser.add_argument('--datasets_name', default="havis", type=str, choices=["havis"])
+    parser.add_argument('--model_name', type=str, choices=["llama2-7b"])
+    parser.add_argument('--datasets_name', type=str, choices=["havis"])
 
     args = parser.parse_args()
 
-    train(args.model_name_or_path, args.datasets_name)
+    train(args.model_name, args.datasets_name)

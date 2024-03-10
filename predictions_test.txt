@@ -1,0 +1,130 @@
+{"operation": "extend", "file": "data.csv", "pointer": null, "group": null}
+{"operation": "create", "file": "data.csv", "pointer": null, "group": null}
+{"operation": "extend", "file": "data.csv", "pointer": null, "group": null}
+{"operation": "extend", "file": "stocks.csv", "pointer": null, "group": "2"}
+{"operation": "extend", "file": "stocks.csv", "pointer": null, "group": "2"}
+{"operation": "create", "file": "flightaffim.csv", "pointer": null, "group": "flight"}
+{"operation": "extend", "file": "flightaffim.csv", "pointer": null, "group": "flight"}
+{"operation": "extend", "file": "flightaffim.csv", "pointer": null, "group": "flight"}
+{"operation": "extend", "file": "csv 123", "pointer": null, "group": null}
+{"operation": "create", "file": "123", "pointer": null, "group": null}
+{"operation": "extend", "file": "123.csv", "pointer": null, "group": null}
+{"operation": "encodings", "file": null, "pointer": null, "group": "B"}
+{"operation": "extend", "file": null, "pointer": null, "group": "B"}
+{"operation": "encodings", "file": null, "pointer": null, "group": null}
+{"operation": "extend", "file": null, "pointer": null, "group": null}
+{"operation": "highlight", "file": null, "pointer": null, "group": null}
+{"operation": "extend", "file": null, "pointer": null, "group": "1"}
+{"operation": "create", "file": null, "pointer": null, "group": "1"}
+{"operation": "extend", "file": null, "pointer": null, "group": "1"}
+{"operation": "encodings", "file": null, "pointer": null, "group": "adamast"}
+{"operation": "extend", "file": null, "pointer": null, "group": "adamast"}
+{"operation": "encodings", "file": null, "pointer": null, "group": "adamast"}
+{"operation": "encodings", "file": null, "pointer": null, "group": "adamast"}
+{"operation": "extend", "file": null, "pointer": [1, 2], "group": "eriuak"}
+{"operation": "extend", "file": "extend.csv", "pointer": [1, 2], "group": "eriuak"}
+{"operation": "extend", "file": "seavisin1902.csv", "pointer": [2, 3, 4], "group": "B"}
+{"operation": "extend", "file": "seavisin1902", "pointer": [2, 3, 4], "group": "B"}
+{"operation": "extend", "file": "extend.csv", "pointer": [1, 2, 4, 6], "group": "numberA"}
+{"operation": "extend", "file": "floews.txt", "pointer": null, "group": null}
+{"operation": "extend", "file": "txt floews", "pointer": null, "group": null}
+{"operation": "extend", "file": "data_add.csv", "pointer": null, "group": "1"}
+{"operation": "extend", "file": "data_add.csv", "pointer": null, "group": "1"}
+{"operation": "highlight", "file": "data_add.csv", "pointer": null, "group": "1"}
+{"operation": "extend", "file": "newplanes", "pointer": [2, 4, 5], "group": "333"}
+{"operation": "extend", "file": "newplanes.csv", "pointer": [2, 4, 5], "group": "333"}
+{"operation": "extend", "file": "1986", "pointer": [1], "group": "1"}
+{"operation": "extend", "file": "1986.csv", "pointer": null, "group": "1"}
+{"operation": "extend", "file": "223iris", "pointer": [-2, -1], "group": "1"}
+{"operation": "extend", "file": "223iris.txt", "pointer": [-2, -1], "group": "1"}
+{"operation": "extend", "file": "hongkong.csv", "pointer": [3, 2], "group": "1"}
+{"operation": "extend", "file": "hongkong.csv", "pointer": [2, -3], "group": "1"}
+{"operation": "highlight", "file": null, "pointer": [4, 5], "group": null}
+{"operation": "highlight", "file": null, "pointer": [4, 5], "group": null}
+{"operation": "highlight", "file": null, "pointer": [-2, -1], "group": "eng"}
+{"operation": "highlight", "file": null, "pointer": [-2, -1], "group": "eng"}
+{"operation": "highlight", "file": null, "pointer": [-2, -1], "group": "eng"}
+{"operation": "highlight", "file": null, "pointer": [1, -2], "group": null}
+{"operation": "highlight", "file": null, "pointer": [1, 2, -1, -2], "group": null}
+{"operation": "highlight", "file": null, "pointer": [1, 3, 4, 7], "group": null}
+{"operation": "highlight", "file": null, "pointer": [1, 3, 4, 7], "group": null}
+{"operation": "highlight", "file": null, "pointer": null, "group": "lalala"}
+{"operation": "highlight", "file": null, "pointer": null, "group": "lalala"}
+{"operation": "highlight", "file": null, "pointer": [1, 2, 3, 4, 5], "group": "1"}
+{"operation": "highlight", "file": null, "pointer": [1, 2, 3, 4, 5], "group": "1"}
+{"operation": "highlight", "file": null, "pointer": [1, 2, 3, 4, 5], "group": "1"}
+{"operation": "highlight", "file": null, "pointer": [2, 1, 3], "group": null}
+{"operation": "highlight", "file": null, "pointer": [-2, 1, 3], "group": null}
+{"operation": "highlight", "file": null, "pointer": [3], "group": null}
+{"operation": "highlight", "file": null, "pointer": [3], "group": null}
+{"operation": "highlight", "file": null, "pointer": [1, 2, 3], "group": null}
+{"operation": "highlight", "file": null, "pointer": [3], "group": null}
+{"operation": "highlight", "file": null, "pointer": [2, 5, 6], "group": null}
+{"operation": "highlight", "file": null, "pointer": [2, 5, 6], "group": null}
+{"operation": "highlight", "file": null, "pointer": [2, 5, 6], "group": null}
+{"operation": "highlight", "file": null, "pointer": null, "group": "A"}
+{"operation": "highlight", "file": null, "pointer": null, "group": "A"}
+{"operation": "highlight", "file": null, "pointer": null, "group": "A"}
+{"operation": "highlight", "file": null, "pointer": null, "group": "A"}
+{"operation": "highlight", "file": null, "pointer": [1, 2, 3], "group": "A"}
+{"operation": "highlight", "file": null, "pointer": [1, 2, 3], "group": "A"}
+{"operation": "highlight", "file": null, "pointer": [1, 2, 3], "group": "star"}
+{"operation": "highlight", "file": null, "pointer": [2, 3, 6, 7], "group": "C"}
+{"operation": "highlight", "file": null, "pointer": [2, 3, 6, 7], "group": "C"}
+{"operation": "trendline", "file": null, "pointer": null, "group": null}
+{"operation": "trendline", "file": null, "pointer": null, "group": null}
+{"operation": "trendline", "file": null, "pointer": null, "group": null}
+{"operation": "trendline", "file": null, "pointer": null, "group": null}
+{"operation": "trendline", "file": null, "pointer": null, "group": null}
+{"operation": "trendline", "file": null, "pointer": null, "group": "mirage"}
+{"operation": "trendline", "file": null, "pointer": null, "group": "mirage"}
+{"operation": "trendline", "file": null, "pointer": null, "group": "mirage"}
+{"operation": "extend", "file": null, "pointer": [1, 2, 3], "group": null}
+{"operation": "trendline", "file": null, "pointer": [1, 2, 3], "group": null}
+{"operation": "trendline", "file": null, "pointer": [1, 2, 3], "group": null}
+{"operation": "trendline", "file": null, "pointer": [2, 3], "group": null}
+{"operation": "trendline", "file": null, "pointer": [2, 3], "group": null}
+{"operation": "trendline", "file": null, "pointer": [1, 3, 5, 7], "group": null}
+{"operation": "trendline", "file": null, "pointer": null, "group": null}
+{"operation": "trendline", "file": null, "pointer": null, "group": "mirage"}
+{"operation": "trendline", "file": null, "pointer": null, "group": "mirage"}
+{"operation": "trendline", "file": null, "pointer": null, "group": "mirage"}
+{"operation": "trendline", "file": null, "pointer": [4, 5, 6], "group": "B"}
+{"operation": "trendline", "file": null, "pointer": [4, 5, 6], "group": "B"}
+{"operation": "reference", "file": null, "pointer": null, "group": null}
+{"operation": "reference", "file": null, "pointer": null, "group": null}
+{"operation": "reference", "file": null, "pointer": null, "group": null}
+{"operation": "reference", "file": null, "pointer": null, "group": null}
+{"operation": "max", "file": null, "pointer": [2, 3, 4], "group": "C"}
+{"operation": "max", "file": null, "pointer": [2, 3, 4], "group": "C"}
+{"operation": "max", "file": null, "pointer": null, "group": "york"}
+{"operation": "max", "file": null, "pointer": null, "group": "york"}
+{"operation": "max", "file": "asia", "pointer": [-2, -1], "group": "people"}
+{"operation": "max", "file": "population", "pointer": [-2, -1], "group": "asia"}
+{"operation": "max", "file": null, "pointer": [1, 3, 5], "group": null}
+{"operation": "max", "file": null, "pointer": [1, 3, 5], "group": null}
+{"operation": "mean", "file": null, "pointer": null, "group": null}
+{"operation": "mean", "file": null, "pointer": null, "group": null}
+{"operation": "mean", "file": null, "pointer": null, "group": null}
+{"operation": "mean", "file": null, "pointer": null, "group": "3"}
+{"operation": "mean", "file": null, "pointer": null, "group": "3"}
+{"operation": "mean", "file": null, "pointer": null, "group": "3"}
+{"operation": "mean", "file": null, "pointer": [1, 2, 3], "group": "A"}
+{"operation": "mean", "file": null, "pointer": [1, 2, 3], "group": "A"}
+{"operation": "min", "file": null, "pointer": [1, 2, 3], "group": "1"}
+{"operation": "min", "file": null, "pointer": [1, 2, 3], "group": "1"}
+{"operation": "min", "file": null, "pointer": [1, 2, 3], "group": "1"}
+{"operation": "min", "file": null, "pointer": null, "group": "1"}
+{"operation": "min", "file": null, "pointer": null, "group": "1"}
+{"operation": "min", "file": null, "pointer": null, "group": "1"}
+{"operation": "min", "file": null, "pointer": [-3, -2, -1], "group": null}
+{"operation": "min", "file": null, "pointer": [-3, -2, -1], "group": null}
+{"operation": "min", "file": null, "pointer": [-3, -2, -1], "group": null}
+{"operation": "min", "file": null, "pointer": null, "group": "ABS"}
+{"operation": "min", "file": null, "pointer": null, "group": "ABS"}
+{"operation": "min", "file": null, "pointer": null, "group": "ABS"}
+{"operation": "min", "file": null, "pointer": [1, 3, 4, 6], "group": "oocn"}
+{"operation": "min", "file": null, "pointer": null, "group": "oocn"}
+{"operation": "highlight", "file": null, "pointer": null, "group": null}
+{"operation": "extend", "file": null, "pointer": null, "group": null}
+{"operation": "extend", "file": null, "pointer": null, "group": null}

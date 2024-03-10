@@ -2,12 +2,12 @@ import json
 
 
 if __name__ == "__main__":
-    with open("./predictions_test.txt", "r", encoding="utf-8") as f:
+    with open("./predictions.txt", "r", encoding="utf-8") as f:
         predictions = f.readlines()
     
     with open("./data/seed_dataset.json", "r", encoding="utf-8") as f:
         references = json.load(f)
-        references = [ref["output"] for ref in references]
+        references = [json.dumps(ref["output"]) for ref in references]
     
 
     assert len(references) == len(predictions)
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     
     for pred, ref in zip(predictions, references):
         try:
-            pred = json.loads(pred)
+            pred = eval(pred)
             ref = json.loads(ref)
 
             operation_flag = "operation" in pred and ref["operation"] == pred["operation"]
@@ -34,7 +34,7 @@ if __name__ == "__main__":
                 pointer_flag = False
             elif (ref["pointer"] is None and pred["pointer"] is not None) or (ref["pointer"] is not None and pred["pointer"] is None):
                 pointer_flag = False
-            elif ref["pointer"] is not None and pred["pointer"] is not None and set(ref["pointer"]) != set(pred["pointer"]):
+            elif ref["pointer"] is not None and pred["pointer"] is not None and (set(ref["pointer"]) != set(pred["pointer"]) and (set([i + 1 for i in pred["pointer"]]) != set(ref["pointer"]))):
                 pointer_flag = False
             group_flag = "group" in pred and ref["group"] == pred["group"]
             

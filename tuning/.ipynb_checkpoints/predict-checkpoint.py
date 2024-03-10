@@ -14,7 +14,7 @@ def predict(checkpoint_path, save_path):
     tokenizer.pad_token_id = tokenizer.eos_token_id
     tokenized_ds = load_datasets("havis", tokenizer)
     predictions = []
-    for sample in tqdm(tokenized_ds["test"]):
+    for sample in tqdm(tokenized_ds["validation"]):
         input_len = 0
         while sample["labels"][input_len] == -100:
             input_len += 1
@@ -42,5 +42,5 @@ def predict(checkpoint_path, save_path):
 
 if __name__ == "__main__":
     MODEL_CHECKPOINT = "./checkpoint/checkpoint-400"
-    SAVE_PATH = "./predictions_test.txt"
+    SAVE_PATH = "./predictions.txt"
     predict(MODEL_CHECKPOINT, SAVE_PATH)
