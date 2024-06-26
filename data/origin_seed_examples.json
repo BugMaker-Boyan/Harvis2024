@@ -2,26 +2,26 @@
   {
     "Question": "Add horizontal reference lines.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Property_ID",
+        "Location",
+        "Property_Type",
         "Bedrooms",
         "Bathrooms",
+        "Square_Feet",
+        "Price_USD",
         "Listing_Date",
         "Agent_Name",
-        "Property_Type",
-        "Agent_Contact",
-        "Location",
-        "Property_ID",
-        "Square_Feet",
-        "Price_USD"
+        "Agent_Contact"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Bar",
       "X-Field": "Square_Feet",
       "Y-Field": [
+        "Property_ID",
         "Bathrooms",
-        "Square_Feet",
-        "Property_ID"
+        "Square_Feet"
       ]
     },
     "Overlay": {
@@ -33,16 +33,16 @@
   {
     "Question": "Add reference lines for the Y-axis.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
         "Order_ID",
-        "Total_Price",
-        "Order_Date",
-        "Payment_Method",
         "Customer_ID",
+        "Order_Date",
         "Product_Category",
-        "Quantity",
         "Product_Name",
+        "Quantity",
         "Price_Per_Unit",
+        "Total_Price",
+        "Payment_Method",
         "Shipping_Cost"
       ]
     },
@@ -50,11 +50,14 @@
       "Chart-Type": "Bar",
       "X-Field": "Quantity",
       "Y-Field": [
-        "Order_Date",
+        "Shipping_Cost",
         "Payment_Method",
+        "Order_Date",
         "Price_Per_Unit",
-        "Quantity",
-        "Shipping_Cost"
+        "Price_Per_Unit",
+        "Order_Date",
+        "Price_Per_Unit",
+        "Quantity"
       ]
     },
     "Overlay": {
@@ -66,28 +69,28 @@
   {
     "Question": "Add horizontal reference lines to the Date bars.",
     "Data-Info": {
-      "Data-Fields": [
-        "Transaction_Type",
-        "Currency",
-        "Amount",
-        "Bank_Branch",
+      "Data-Columns": [
         "Transaction_ID",
-        "Account_Holder_Gender",
         "Date",
+        "Account_Type",
+        "Amount",
+        "Currency",
+        "Transaction_Type",
         "Account_Holder_Age",
-        "Account_Type"
+        "Account_Holder_Gender",
+        "Bank_Branch"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Bar",
       "X-Field": "Currency",
       "Y-Field": [
-        "Transaction_Type",
-        "Bank_Branch",
-        "Amount",
-        "Date",
+        "Account_Type",
         "Account_Holder_Age",
-        "Account_Type"
+        "Date",
+        "Bank_Branch",
+        "Transaction_Type",
+        "Amount"
       ]
     },
     "Overlay": {
@@ -99,29 +102,30 @@
   {
     "Question": "Add reference lines to the Sport and Event data sets.",
     "Data-Info": {
-      "Data-Fields": [
-        "Gender",
-        "Country",
-        "Sport",
+      "Data-Columns": [
+        "Athlete_ID",
         "Name",
+        "Age",
+        "Gender",
+        "Sport",
+        "Event",
+        "Country",
         "Personal_Best_Time",
         "Medals_Won",
-        "Event",
-        "Age",
-        "Coach_Name",
-        "Athlete_ID"
+        "Coach_Name"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Bar",
       "X-Field": "Country",
       "Y-Field": [
-        "Sport",
-        "Personal_Best_Time",
+        "Athlete_ID",
         "Medals_Won",
         "Event",
+        "Sport",
+        "Event",
         "Coach_Name",
-        "Athlete_ID"
+        "Personal_Best_Time"
       ]
     },
     "Overlay": {
@@ -136,59 +140,62 @@
   {
     "Question": "Add a vertical reference line for the data with the X-axis at 15.",
     "Data-Info": {
-      "Data-Fields": [
-        "Department",
-        "Gender",
-        "Years_at_Company",
-        "Name",
-        "Position",
-        "Monthly_Salary_USD",
-        "Projects_Completed",
+      "Data-Columns": [
         "Employee_ID",
-        "Last_Promotion_Year",
+        "Name",
         "Age",
-        "Performance_Score"
+        "Gender",
+        "Department",
+        "Position",
+        "Years_at_Company",
+        "Monthly_Salary_USD",
+        "Performance_Score",
+        "Last_Promotion_Year",
+        "Projects_Completed"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Line",
       "X-Field": "Projects_Completed",
       "Y-Field": [
-        "Last_Promotion_Year",
         "Gender",
+        "Employee_ID",
+        "Last_Promotion_Year",
         "Projects_Completed",
-        "Employee_ID"
+        "Gender"
       ]
     },
     "Overlay": {
       "Operation": "Reference",
-      "X-Value": 15,
+      "X-Value": "15",
       "Y-Value": null
     }
   },
   {
     "Question": "Add vertical guide lines",
     "Data-Info": {
-      "Data-Fields": [
-        "Duration_Minutes",
-        "Title",
-        "Lead_Actor",
-        "Director",
+      "Data-Columns": [
         "Movie_ID",
-        "Rating",
+        "Title",
         "Genre",
         "Release_Year",
-        "Box_Office_Million_USD"
+        "Duration_Minutes",
+        "Rating",
+        "Box_Office_Million_USD",
+        "Director",
+        "Lead_Actor"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Line",
       "X-Field": "Duration_Minutes",
       "Y-Field": [
-        "Lead_Actor",
         "Genre",
         "Director",
-        "Movie_ID"
+        "Director",
+        "Movie_ID",
+        "Movie_ID",
+        "Lead_Actor"
       ]
     },
     "Overlay": {
@@ -200,29 +207,32 @@
   {
     "Question": "Add vertical and horizontal reference lines to the charts.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Property_ID",
+        "Location",
+        "Property_Type",
         "Bedrooms",
         "Bathrooms",
+        "Square_Feet",
+        "Price_USD",
         "Listing_Date",
         "Agent_Name",
-        "Property_Type",
-        "Agent_Contact",
-        "Location",
-        "Property_ID",
-        "Square_Feet",
-        "Price_USD"
+        "Agent_Contact"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Line",
       "X-Field": "Agent_Name",
       "Y-Field": [
-        "Bathrooms",
         "Property_Type",
-        "Location",
+        "Bathrooms",
+        "Price_USD",
+        "Square_Feet",
+        "Property_Type",
         "Property_ID",
         "Square_Feet",
-        "Price_USD"
+        "Property_ID",
+        "Location"
       ]
     },
     "Overlay": {
@@ -234,14 +244,14 @@
   {
     "Question": "Add horizontal reference lines to the name and gender data.",
     "Data-Info": {
-      "Data-Fields": [
-        "Gender",
+      "Data-Columns": [
         "Patient_ID",
-        "Doctor",
         "Name",
-        "Condition",
         "Age",
+        "Gender",
+        "Condition",
         "Treatment",
+        "Doctor",
         "Hospital",
         "Visit_Date",
         "Next_Visit_Date"
@@ -251,8 +261,8 @@
       "Chart-Type": "Line",
       "X-Field": "Gender",
       "Y-Field": [
-        "Gender",
-        "Name"
+        "Name",
+        "Gender"
       ]
     },
     "Overlay": {
@@ -267,17 +277,17 @@
   {
     "Question": "Add a central reference line to the pie chart.",
     "Data-Info": {
-      "Data-Fields": [
-        "Gender",
-        "Country",
-        "Sport",
+      "Data-Columns": [
+        "Athlete_ID",
         "Name",
+        "Age",
+        "Gender",
+        "Sport",
+        "Event",
+        "Country",
         "Personal_Best_Time",
         "Medals_Won",
-        "Event",
-        "Age",
-        "Coach_Name",
-        "Athlete_ID"
+        "Coach_Name"
       ]
     },
     "Chart-Info": {
@@ -296,17 +306,17 @@
   {
     "Question": "Add guidelines.",
     "Data-Info": {
-      "Data-Fields": [
-        "Total_Purchases",
-        "Gender",
-        "Name",
-        "Last_Purchase_Date",
+      "Data-Columns": [
         "Customer_ID",
-        "Average_Purchase_Value_USD",
+        "Name",
         "Age",
-        "Loyalty_Member",
+        "Gender",
+        "Total_Purchases",
         "Total_Spent_USD",
-        "Favorite_Category"
+        "Favorite_Category",
+        "Average_Purchase_Value_USD",
+        "Last_Purchase_Date",
+        "Loyalty_Member"
       ]
     },
     "Chart-Info": {
@@ -325,17 +335,17 @@
   {
     "Question": "Add horizontal reference lines",
     "Data-Info": {
-      "Data-Fields": [
-        "Impressions",
+      "Data-Columns": [
+        "Campaign_ID",
+        "Campaign_Name",
+        "Start_Date",
         "End_Date",
         "Budget_USD",
-        "Campaign_Name",
-        "Conversions",
         "Actual_Spend_USD",
-        "Campaign_ID",
-        "ROI_Percentage",
+        "Impressions",
         "Clicks",
-        "Start_Date"
+        "Conversions",
+        "ROI_Percentage"
       ]
     },
     "Chart-Info": {
@@ -354,16 +364,16 @@
   {
     "Question": "Add vertical reference lines.",
     "Data-Info": {
-      "Data-Fields": [
-        "Employees",
+      "Data-Columns": [
         "Company_ID",
-        "Headquarters_Location",
-        "CEO_Name",
+        "Company_Name",
         "Founding_Year",
         "Industry",
-        "Company_Name",
+        "Employees",
         "Annual_Revenue_Million_USD",
-        "Funding_Stage"
+        "Funding_Stage",
+        "Headquarters_Location",
+        "CEO_Name"
       ]
     },
     "Chart-Info": {
@@ -384,14 +394,14 @@
   {
     "Question": "Add vertical reference lines for data with age ranging from 29 to 45.",
     "Data-Info": {
-      "Data-Fields": [
-        "Gender",
+      "Data-Columns": [
         "Patient_ID",
-        "Doctor",
         "Name",
-        "Condition",
         "Age",
+        "Gender",
+        "Condition",
         "Treatment",
+        "Doctor",
         "Hospital",
         "Visit_Date",
         "Next_Visit_Date"
@@ -402,7 +412,8 @@
       "X-Field": "Age",
       "Y-Field": [
         "Age",
-        "Treatment"
+        "Treatment",
+        "Age"
       ]
     },
     "Overlay": {
@@ -417,25 +428,25 @@
   {
     "Question": "Add horizontal reference lines to the chart.",
     "Data-Info": {
-      "Data-Fields": [
-        "Total_Purchases",
-        "Gender",
-        "Name",
-        "Last_Purchase_Date",
+      "Data-Columns": [
         "Customer_ID",
-        "Average_Purchase_Value_USD",
+        "Name",
         "Age",
-        "Loyalty_Member",
+        "Gender",
+        "Total_Purchases",
         "Total_Spent_USD",
-        "Favorite_Category"
+        "Favorite_Category",
+        "Average_Purchase_Value_USD",
+        "Last_Purchase_Date",
+        "Loyalty_Member"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Scatter",
       "X-Field": "Loyalty_Member",
       "Y-Field": [
-        "Total_Purchases",
-        "Last_Purchase_Date"
+        "Last_Purchase_Date",
+        "Total_Purchases"
       ]
     },
     "Overlay": {
@@ -447,16 +458,16 @@
   {
     "Question": "Add reference lines to the chart.",
     "Data-Info": {
-      "Data-Fields": [
-        "Visitor_Rating",
-        "Country",
-        "Average_Cost_USD",
-        "Main_Attraction",
-        "Destination_Name",
-        "Average_Days_Stay",
+      "Data-Columns": [
         "Destination_ID",
+        "Destination_Name",
+        "Country",
         "Continent",
+        "Average_Cost_USD",
+        "Average_Days_Stay",
+        "Main_Attraction",
         "Best_Season",
+        "Visitor_Rating",
         "Number_of_Visitors_Million"
       ]
     },
@@ -464,11 +475,12 @@
       "Chart-Type": "Area",
       "X-Field": "Number_of_Visitors_Million",
       "Y-Field": [
-        "Visitor_Rating",
-        "Destination_Name",
-        "Destination_ID",
+        "Continent",
         "Best_Season",
-        "Continent"
+        "Destination_ID",
+        "Visitor_Rating",
+        "Continent",
+        "Destination_Name"
       ]
     },
     "Overlay": {
@@ -480,17 +492,17 @@
   {
     "Question": "Add vertical guideline for female.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Investor_ID",
+        "Name",
+        "Age",
         "Gender",
+        "Portfolio_Value_USD",
         "Stocks_Percentage",
+        "Bonds_Percentage",
         "Real_Estate_Percentage",
         "Other_Investments_Percentage",
-        "Name",
-        "Investor_ID",
         "Annual_Return_Percentage",
-        "Portfolio_Value_USD",
-        "Age",
-        "Bonds_Percentage",
         "Risk_Level"
       ]
     },
@@ -498,10 +510,11 @@
       "Chart-Type": "Area",
       "X-Field": "Gender",
       "Y-Field": [
-        "Name",
         "Age",
         "Portfolio_Value_USD",
-        "Risk_Level"
+        "Risk_Level",
+        "Portfolio_Value_USD",
+        "Name"
       ]
     },
     "Overlay": {
@@ -513,16 +526,16 @@
   {
     "Question": "Highlight all the data on the graph.",
     "Data-Info": {
-      "Data-Fields": [
-        "Units_Sold",
-        "Category",
-        "Sales_Date",
+      "Data-Columns": [
+        "Product_ID",
         "Product_Name",
+        "Category",
+        "Price_USD",
+        "Units_Sold",
         "Revenue_USD",
         "Store_Location",
-        "Product_ID",
-        "Sales_Person",
-        "Price_USD"
+        "Sales_Date",
+        "Sales_Person"
       ]
     },
     "Chart-Info": {
@@ -541,29 +554,32 @@
   {
     "Question": "Highlight the set of data on August 15, 2024.",
     "Data-Info": {
-      "Data-Fields": [
-        "Impressions",
+      "Data-Columns": [
+        "Campaign_ID",
+        "Campaign_Name",
+        "Start_Date",
         "End_Date",
         "Budget_USD",
-        "Campaign_Name",
-        "Conversions",
         "Actual_Spend_USD",
-        "Campaign_ID",
-        "ROI_Percentage",
+        "Impressions",
         "Clicks",
-        "Start_Date"
+        "Conversions",
+        "ROI_Percentage"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Bar",
       "X-Field": "Start_Date",
       "Y-Field": [
-        "Impressions",
-        "Budget_USD",
-        "Actual_Spend_USD",
         "Campaign_ID",
         "ROI_Percentage",
-        "Start_Date"
+        "Budget_USD",
+        "Budget_USD",
+        "Budget_USD",
+        "Actual_Spend_USD",
+        "Start_Date",
+        "Start_Date",
+        "Impressions"
       ]
     },
     "Overlay": {
@@ -575,14 +591,14 @@
   {
     "Question": "Highlight the Age data.",
     "Data-Info": {
-      "Data-Fields": [
-        "Gender",
+      "Data-Columns": [
         "Patient_ID",
-        "Doctor",
         "Name",
-        "Condition",
         "Age",
+        "Gender",
+        "Condition",
         "Treatment",
+        "Doctor",
         "Hospital",
         "Visit_Date",
         "Next_Visit_Date"
@@ -605,27 +621,28 @@
   {
     "Question": "Highlight the lines with X-axis values ranging from 100 to 300.",
     "Data-Info": {
-      "Data-Fields": [
-        "Units_Sold",
-        "Category",
-        "Sales_Date",
+      "Data-Columns": [
+        "Product_ID",
         "Product_Name",
+        "Category",
+        "Price_USD",
+        "Units_Sold",
         "Revenue_USD",
         "Store_Location",
-        "Product_ID",
-        "Sales_Person",
-        "Price_USD"
+        "Sales_Date",
+        "Sales_Person"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Line",
       "X-Field": "Units_Sold",
       "Y-Field": [
+        "Product_Name",
+        "Product_Name",
+        "Revenue_USD",
         "Units_Sold",
         "Category",
-        "Store_Location",
-        "Product_Name",
-        "Revenue_USD"
+        "Store_Location"
       ]
     },
     "Overlay": {
@@ -640,31 +657,32 @@
   {
     "Question": "Highlight the level data.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Student_ID",
+        "Age",
         "Gender",
         "Grade_Level",
-        "Extracurricular_Activity",
-        "School_Region",
-        "Age",
-        "Student_ID",
-        "Activity_Hours_Per_Week",
         "GPA",
         "Favorite_Subject",
-        "Hours_Studied_Per_Week"
+        "Hours_Studied_Per_Week",
+        "Extracurricular_Activity",
+        "Activity_Hours_Per_Week",
+        "School_Region"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Line",
       "X-Field": "Student_ID",
       "Y-Field": [
-        "Favorite_Subject",
-        "Gender",
-        "Grade_Level",
-        "Age",
-        "Activity_Hours_Per_Week",
         "GPA",
+        "Hours_Studied_Per_Week",
+        "Age",
+        "Grade_Level",
         "Extracurricular_Activity",
-        "Hours_Studied_Per_Week"
+        "Hours_Studied_Per_Week",
+        "Gender",
+        "Activity_Hours_Per_Week",
+        "Favorite_Subject"
       ]
     },
     "Overlay": {
@@ -676,17 +694,17 @@
   {
     "Question": "Highlight the sector with a temperature of 28 degrees.",
     "Data-Info": {
-      "Data-Fields": [
-        "Temperature_C",
-        "NO2_Level",
-        "PM2.5_Level",
-        "City",
+      "Data-Columns": [
         "Station_ID",
-        "Humidity_Percentage",
-        "O3_Level",
+        "City",
         "Date",
+        "PM2.5_Level",
+        "PM10_Level",
+        "NO2_Level",
+        "O3_Level",
         "CO_Level",
-        "PM10_Level"
+        "Temperature_C",
+        "Humidity_Percentage"
       ]
     },
     "Chart-Info": {
@@ -698,25 +716,25 @@
     },
     "Overlay": {
       "Operation": "Highlight",
-      "X-Value": 28,
+      "X-Value": "28",
       "Y-Value": "all"
     }
   },
   {
     "Question": "Highlight the data for ages 28 to 35.",
     "Data-Info": {
-      "Data-Fields": [
-        "Department",
-        "Gender",
-        "Years_at_Company",
-        "Name",
-        "Position",
-        "Monthly_Salary_USD",
-        "Projects_Completed",
+      "Data-Columns": [
         "Employee_ID",
-        "Last_Promotion_Year",
+        "Name",
         "Age",
-        "Performance_Score"
+        "Gender",
+        "Department",
+        "Position",
+        "Years_at_Company",
+        "Monthly_Salary_USD",
+        "Performance_Score",
+        "Last_Promotion_Year",
+        "Projects_Completed"
       ]
     },
     "Chart-Info": {
@@ -738,29 +756,31 @@
   {
     "Question": "Highlight the data set \"Sport\".",
     "Data-Info": {
-      "Data-Fields": [
-        "Gender",
-        "Country",
-        "Sport",
+      "Data-Columns": [
+        "Athlete_ID",
         "Name",
+        "Age",
+        "Gender",
+        "Sport",
+        "Event",
+        "Country",
         "Personal_Best_Time",
         "Medals_Won",
-        "Event",
-        "Age",
-        "Coach_Name",
-        "Athlete_ID"
+        "Coach_Name"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Scatter",
       "X-Field": "Personal_Best_Time",
       "Y-Field": [
-        "Sport",
-        "Medals_Won",
-        "Event",
-        "Age",
         "Coach_Name",
-        "Athlete_ID"
+        "Medals_Won",
+        "Age",
+        "Medals_Won",
+        "Sport",
+        "Athlete_ID",
+        "Event",
+        "Sport"
       ]
     },
     "Overlay": {
@@ -772,28 +792,30 @@
   {
     "Question": "Highlight the points with carbon monoxide levels between 0.5 and 1.0.",
     "Data-Info": {
-      "Data-Fields": [
-        "Temperature_C",
-        "NO2_Level",
-        "PM2.5_Level",
-        "City",
+      "Data-Columns": [
         "Station_ID",
-        "Humidity_Percentage",
-        "O3_Level",
+        "City",
         "Date",
+        "PM2.5_Level",
+        "PM10_Level",
+        "NO2_Level",
+        "O3_Level",
         "CO_Level",
-        "PM10_Level"
+        "Temperature_C",
+        "Humidity_Percentage"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Scatter",
       "X-Field": "CO_Level",
       "Y-Field": [
-        "Temperature_C",
-        "Station_ID",
+        "O3_Level",
         "Humidity_Percentage",
         "O3_Level",
-        "Date"
+        "Date",
+        "Date",
+        "Station_ID",
+        "Temperature_C"
       ]
     },
     "Overlay": {
@@ -808,27 +830,28 @@
   {
     "Question": "Highlight the age data on the chart.",
     "Data-Info": {
-      "Data-Fields": [
-        "Gender",
-        "Country",
-        "Sport",
+      "Data-Columns": [
+        "Athlete_ID",
         "Name",
+        "Age",
+        "Gender",
+        "Sport",
+        "Event",
+        "Country",
         "Personal_Best_Time",
         "Medals_Won",
-        "Event",
-        "Age",
-        "Coach_Name",
-        "Athlete_ID"
+        "Coach_Name"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Area",
       "X-Field": "Sport",
       "Y-Field": [
-        "Name",
+        "Age",
+        "Coach_Name",
         "Age",
         "Country",
-        "Coach_Name"
+        "Name"
       ]
     },
     "Overlay": {
@@ -840,16 +863,16 @@
   {
     "Question": "Add a trendline to the unit price in the graph.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
         "Order_ID",
-        "Total_Price",
-        "Order_Date",
-        "Payment_Method",
         "Customer_ID",
+        "Order_Date",
         "Product_Category",
-        "Quantity",
         "Product_Name",
+        "Quantity",
         "Price_Per_Unit",
+        "Total_Price",
+        "Payment_Method",
         "Shipping_Cost"
       ]
     },
@@ -858,6 +881,7 @@
       "X-Field": "Quantity",
       "Y-Field": [
         "Product_Category",
+        "Price_Per_Unit",
         "Price_Per_Unit",
         "Customer_ID",
         "Order_Date"
@@ -872,28 +896,28 @@
   {
     "Question": "Add trendline to Square_Feet and Property_ID.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Property_ID",
+        "Location",
+        "Property_Type",
         "Bedrooms",
         "Bathrooms",
+        "Square_Feet",
+        "Price_USD",
         "Listing_Date",
         "Agent_Name",
-        "Property_Type",
-        "Agent_Contact",
-        "Location",
-        "Property_ID",
-        "Square_Feet",
-        "Price_USD"
+        "Agent_Contact"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Bar",
       "X-Field": "Agent_Name",
       "Y-Field": [
-        "Bedrooms",
-        "Bathrooms",
-        "Agent_Contact",
         "Property_ID",
-        "Square_Feet"
+        "Agent_Contact",
+        "Square_Feet",
+        "Bathrooms",
+        "Bedrooms"
       ]
     },
     "Overlay": {
@@ -908,25 +932,25 @@
   {
     "Question": "Add a trendline to the location data.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Property_ID",
+        "Location",
+        "Property_Type",
         "Bedrooms",
         "Bathrooms",
+        "Square_Feet",
+        "Price_USD",
         "Listing_Date",
         "Agent_Name",
-        "Property_Type",
-        "Agent_Contact",
-        "Location",
-        "Property_ID",
-        "Square_Feet",
-        "Price_USD"
+        "Agent_Contact"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Bar",
       "X-Field": "Bathrooms",
       "Y-Field": [
-        "Property_Type",
-        "Location"
+        "Location",
+        "Property_Type"
       ]
     },
     "Overlay": {
@@ -938,25 +962,27 @@
   {
     "Question": "Add a trendline to the ozone levels.",
     "Data-Info": {
-      "Data-Fields": [
-        "Temperature_C",
-        "NO2_Level",
-        "PM2.5_Level",
-        "City",
+      "Data-Columns": [
         "Station_ID",
-        "Humidity_Percentage",
-        "O3_Level",
+        "City",
         "Date",
+        "PM2.5_Level",
+        "PM10_Level",
+        "NO2_Level",
+        "O3_Level",
         "CO_Level",
-        "PM10_Level"
+        "Temperature_C",
+        "Humidity_Percentage"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Line",
       "X-Field": "CO_Level",
       "Y-Field": [
-        "Station_ID",
         "O3_Level",
+        "O3_Level",
+        "Station_ID",
+        "City",
         "City"
       ]
     },
@@ -969,25 +995,26 @@
   {
     "Question": "Add a trendline to the company's ID.",
     "Data-Info": {
-      "Data-Fields": [
-        "Employees",
+      "Data-Columns": [
         "Company_ID",
-        "Headquarters_Location",
-        "CEO_Name",
+        "Company_Name",
         "Founding_Year",
         "Industry",
-        "Company_Name",
+        "Employees",
         "Annual_Revenue_Million_USD",
-        "Funding_Stage"
+        "Funding_Stage",
+        "Headquarters_Location",
+        "CEO_Name"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Scatter",
       "X-Field": "Employees",
       "Y-Field": [
-        "Industry",
         "Company_ID",
-        "CEO_Name"
+        "CEO_Name",
+        "Industry",
+        "Industry"
       ]
     },
     "Overlay": {
@@ -999,17 +1026,17 @@
   {
     "Question": "Add a trendline to the ROI percentage data.",
     "Data-Info": {
-      "Data-Fields": [
-        "Impressions",
+      "Data-Columns": [
+        "Campaign_ID",
+        "Campaign_Name",
+        "Start_Date",
         "End_Date",
         "Budget_USD",
-        "Campaign_Name",
-        "Conversions",
         "Actual_Spend_USD",
-        "Campaign_ID",
-        "ROI_Percentage",
+        "Impressions",
         "Clicks",
-        "Start_Date"
+        "Conversions",
+        "ROI_Percentage"
       ]
     },
     "Chart-Info": {
@@ -1017,8 +1044,10 @@
       "X-Field": "Conversions",
       "Y-Field": [
         "Campaign_ID",
-        "ROI_Percentage",
+        "End_Date",
         "Budget_USD",
+        "End_Date",
+        "ROI_Percentage",
         "End_Date"
       ]
     },
@@ -1031,16 +1060,16 @@
   {
     "Question": "The minimum value of the average million visitors.",
     "Data-Info": {
-      "Data-Fields": [
-        "Visitor_Rating",
-        "Country",
-        "Average_Cost_USD",
-        "Main_Attraction",
-        "Destination_Name",
-        "Average_Days_Stay",
+      "Data-Columns": [
         "Destination_ID",
+        "Destination_Name",
+        "Country",
         "Continent",
+        "Average_Cost_USD",
+        "Average_Days_Stay",
+        "Main_Attraction",
         "Best_Season",
+        "Visitor_Rating",
         "Number_of_Visitors_Million"
       ]
     },
@@ -1048,10 +1077,12 @@
       "Chart-Type": "Bar",
       "X-Field": "Average_Days_Stay",
       "Y-Field": [
-        "Country",
         "Number_of_Visitors_Million",
         "Average_Days_Stay",
-        "Best_Season"
+        "Average_Days_Stay",
+        "Number_of_Visitors_Million",
+        "Best_Season",
+        "Country"
       ]
     },
     "Overlay": {
@@ -1063,25 +1094,25 @@
   {
     "Question": "Draw a horizontal line on the graph representing the minimum level of nitrogen dioxide.",
     "Data-Info": {
-      "Data-Fields": [
-        "Temperature_C",
-        "NO2_Level",
-        "PM2.5_Level",
-        "City",
+      "Data-Columns": [
         "Station_ID",
-        "Humidity_Percentage",
-        "O3_Level",
+        "City",
         "Date",
+        "PM2.5_Level",
+        "PM10_Level",
+        "NO2_Level",
+        "O3_Level",
         "CO_Level",
-        "PM10_Level"
+        "Temperature_C",
+        "Humidity_Percentage"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Bar",
       "X-Field": "Date",
       "Y-Field": [
-        "Date",
-        "NO2_Level"
+        "NO2_Level",
+        "Date"
       ]
     },
     "Overlay": {
@@ -1093,27 +1124,28 @@
   {
     "Question": "Calculate the minimum value of age and display it on the graph.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Student_ID",
+        "Age",
         "Gender",
         "Grade_Level",
-        "Extracurricular_Activity",
-        "School_Region",
-        "Age",
-        "Student_ID",
-        "Activity_Hours_Per_Week",
         "GPA",
         "Favorite_Subject",
-        "Hours_Studied_Per_Week"
+        "Hours_Studied_Per_Week",
+        "Extracurricular_Activity",
+        "Activity_Hours_Per_Week",
+        "School_Region"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Line",
       "X-Field": "GPA",
       "Y-Field": [
-        "Gender",
-        "Age",
         "Favorite_Subject",
-        "School_Region"
+        "Age",
+        "School_Region",
+        "Gender",
+        "Gender"
       ]
     },
     "Overlay": {
@@ -1125,28 +1157,29 @@
   {
     "Question": "Calculate the minimum value of the company ID data for the scatter plot.",
     "Data-Info": {
-      "Data-Fields": [
-        "Employees",
+      "Data-Columns": [
         "Company_ID",
-        "Headquarters_Location",
-        "CEO_Name",
+        "Company_Name",
         "Founding_Year",
         "Industry",
-        "Company_Name",
+        "Employees",
         "Annual_Revenue_Million_USD",
-        "Funding_Stage"
+        "Funding_Stage",
+        "Headquarters_Location",
+        "CEO_Name"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Scatter",
       "X-Field": "Funding_Stage",
       "Y-Field": [
+        "Company_Name",
         "Company_ID",
-        "Headquarters_Location",
-        "CEO_Name",
+        "Company_Name",
         "Funding_Stage",
         "Industry",
-        "Company_Name"
+        "Headquarters_Location",
+        "CEO_Name"
       ]
     },
     "Overlay": {
@@ -1158,28 +1191,30 @@
   {
     "Question": "Calculate the minimum value of price data.",
     "Data-Info": {
-      "Data-Fields": [
-        "Units_Sold",
-        "Category",
-        "Sales_Date",
+      "Data-Columns": [
+        "Product_ID",
         "Product_Name",
+        "Category",
+        "Price_USD",
+        "Units_Sold",
         "Revenue_USD",
         "Store_Location",
-        "Product_ID",
-        "Sales_Person",
-        "Price_USD"
+        "Sales_Date",
+        "Sales_Person"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Area",
       "X-Field": "Sales_Person",
       "Y-Field": [
+        "Price_USD",
         "Units_Sold",
         "Category",
         "Revenue_USD",
-        "Product_ID",
         "Sales_Person",
-        "Price_USD"
+        "Price_USD",
+        "Product_ID",
+        "Revenue_USD"
       ]
     },
     "Overlay": {
@@ -1191,29 +1226,29 @@
   {
     "Question": "Display the maximum value of mileage.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
         "Vehicle_ID",
-        "Owner_Gender",
         "Type",
-        "Fuel_Type",
-        "Year",
-        "Mileage_km",
-        "Model",
         "Manufacturer",
-        "Region",
-        "Owner_Age"
+        "Model",
+        "Year",
+        "Fuel_Type",
+        "Mileage_km",
+        "Owner_Age",
+        "Owner_Gender",
+        "Region"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Bar",
       "X-Field": "Owner_Gender",
       "Y-Field": [
-        "Type",
-        "Fuel_Type",
-        "Mileage_km",
-        "Year",
         "Region",
-        "Owner_Age"
+        "Mileage_km",
+        "Type",
+        "Owner_Age",
+        "Year",
+        "Fuel_Type"
       ]
     },
     "Overlay": {
@@ -1225,27 +1260,29 @@
   {
     "Question": "Calculate the maximum value of the Release Year and display it.",
     "Data-Info": {
-      "Data-Fields": [
-        "Duration_Minutes",
-        "Title",
-        "Lead_Actor",
-        "Director",
+      "Data-Columns": [
         "Movie_ID",
-        "Rating",
+        "Title",
         "Genre",
         "Release_Year",
-        "Box_Office_Million_USD"
+        "Duration_Minutes",
+        "Rating",
+        "Box_Office_Million_USD",
+        "Director",
+        "Lead_Actor"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Line",
       "X-Field": "Director",
       "Y-Field": [
-        "Lead_Actor",
-        "Movie_ID",
-        "Genre",
         "Release_Year",
-        "Box_Office_Million_USD"
+        "Genre",
+        "Movie_ID",
+        "Movie_ID",
+        "Box_Office_Million_USD",
+        "Lead_Actor",
+        "Movie_ID"
       ]
     },
     "Overlay": {
@@ -1257,27 +1294,28 @@
   {
     "Question": "Calculate the max age of the account holder.",
     "Data-Info": {
-      "Data-Fields": [
-        "Transaction_Type",
-        "Currency",
-        "Amount",
-        "Bank_Branch",
+      "Data-Columns": [
         "Transaction_ID",
-        "Account_Holder_Gender",
         "Date",
+        "Account_Type",
+        "Amount",
+        "Currency",
+        "Transaction_Type",
         "Account_Holder_Age",
-        "Account_Type"
+        "Account_Holder_Gender",
+        "Bank_Branch"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Scatter",
       "X-Field": "Amount",
       "Y-Field": [
-        "Transaction_Type",
-        "Currency",
+        "Account_Holder_Age",
+        "Bank_Branch",
         "Bank_Branch",
         "Transaction_ID",
-        "Account_Holder_Age"
+        "Transaction_Type",
+        "Currency"
       ]
     },
     "Overlay": {
@@ -1289,25 +1327,26 @@
   {
     "Question": "Show the maximum value of average weekly activity time.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Student_ID",
+        "Age",
         "Gender",
         "Grade_Level",
-        "Extracurricular_Activity",
-        "School_Region",
-        "Age",
-        "Student_ID",
-        "Activity_Hours_Per_Week",
         "GPA",
         "Favorite_Subject",
-        "Hours_Studied_Per_Week"
+        "Hours_Studied_Per_Week",
+        "Extracurricular_Activity",
+        "Activity_Hours_Per_Week",
+        "School_Region"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Area",
       "X-Field": "Grade_Level",
       "Y-Field": [
-        "Activity_Hours_Per_Week",
         "Extracurricular_Activity",
+        "Grade_Level",
+        "Activity_Hours_Per_Week",
         "Grade_Level"
       ]
     },
@@ -1320,16 +1359,16 @@
   {
     "Question": "Calculate the mean shipment value.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Shipment_ID",
+        "Origin_City",
         "Destination_City",
         "Shipping_Company",
         "Shipment_Weight_kg",
-        "Departure_Date",
-        "Shipping_Cost_USD",
-        "Origin_City",
-        "Shipment_ID",
-        "Arrival_Date",
         "Shipment_Value_USD",
+        "Shipping_Cost_USD",
+        "Departure_Date",
+        "Arrival_Date",
         "Status"
       ]
     },
@@ -1337,10 +1376,10 @@
       "Chart-Type": "Bar",
       "X-Field": "Shipment_Value_USD",
       "Y-Field": [
-        "Shipping_Company",
-        "Departure_Date",
         "Shipping_Cost_USD",
+        "Departure_Date",
         "Arrival_Date",
+        "Shipping_Company",
         "Shipment_Value_USD"
       ]
     },
@@ -1353,29 +1392,31 @@
   {
     "Question": "Calculate the average value of loyalty members.",
     "Data-Info": {
-      "Data-Fields": [
-        "Total_Purchases",
-        "Gender",
-        "Name",
-        "Last_Purchase_Date",
+      "Data-Columns": [
         "Customer_ID",
-        "Average_Purchase_Value_USD",
+        "Name",
         "Age",
-        "Loyalty_Member",
+        "Gender",
+        "Total_Purchases",
         "Total_Spent_USD",
-        "Favorite_Category"
+        "Favorite_Category",
+        "Average_Purchase_Value_USD",
+        "Last_Purchase_Date",
+        "Loyalty_Member"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Bar",
       "X-Field": "Age",
       "Y-Field": [
-        "Name",
-        "Last_Purchase_Date",
-        "Customer_ID",
         "Average_Purchase_Value_USD",
+        "Average_Purchase_Value_USD",
+        "Loyalty_Member",
+        "Last_Purchase_Date",
         "Age",
-        "Loyalty_Member"
+        "Name",
+        "Average_Purchase_Value_USD",
+        "Customer_ID"
       ]
     },
     "Overlay": {
@@ -1387,17 +1428,17 @@
   {
     "Question": "Display all data labels.",
     "Data-Info": {
-      "Data-Fields": [
-        "Impressions",
+      "Data-Columns": [
+        "Campaign_ID",
+        "Campaign_Name",
+        "Start_Date",
         "End_Date",
         "Budget_USD",
-        "Campaign_Name",
-        "Conversions",
         "Actual_Spend_USD",
-        "Campaign_ID",
-        "ROI_Percentage",
+        "Impressions",
         "Clicks",
-        "Start_Date"
+        "Conversions",
+        "ROI_Percentage"
       ]
     },
     "Chart-Info": {
@@ -1416,17 +1457,17 @@
   {
     "Question": "The label on the graph displays GPA data.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Student_ID",
+        "Age",
         "Gender",
         "Grade_Level",
-        "Extracurricular_Activity",
-        "School_Region",
-        "Age",
-        "Student_ID",
-        "Activity_Hours_Per_Week",
         "GPA",
         "Favorite_Subject",
-        "Hours_Studied_Per_Week"
+        "Hours_Studied_Per_Week",
+        "Extracurricular_Activity",
+        "Activity_Hours_Per_Week",
+        "School_Region"
       ]
     },
     "Chart-Info": {
@@ -1434,9 +1475,10 @@
       "X-Field": "Activity_Hours_Per_Week",
       "Y-Field": [
         "Gender",
-        "School_Region",
-        "Age",
+        "Gender",
         "Student_ID",
+        "Age",
+        "School_Region",
         "GPA"
       ]
     },
@@ -1449,17 +1491,17 @@
   {
     "Question": "Display the numerical values of each part of the Pie chart.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Investor_ID",
+        "Name",
+        "Age",
         "Gender",
+        "Portfolio_Value_USD",
         "Stocks_Percentage",
+        "Bonds_Percentage",
         "Real_Estate_Percentage",
         "Other_Investments_Percentage",
-        "Name",
-        "Investor_ID",
         "Annual_Return_Percentage",
-        "Portfolio_Value_USD",
-        "Age",
-        "Bonds_Percentage",
         "Risk_Level"
       ]
     },
@@ -1479,16 +1521,16 @@
   {
     "Question": "Add the data for units sold of 300 to the x-axis in the graph.",
     "Data-Info": {
-      "Data-Fields": [
-        "Units_Sold",
-        "Category",
-        "Sales_Date",
+      "Data-Columns": [
+        "Product_ID",
         "Product_Name",
+        "Category",
+        "Price_USD",
+        "Units_Sold",
         "Revenue_USD",
         "Store_Location",
-        "Product_ID",
-        "Sales_Person",
-        "Price_USD"
+        "Sales_Date",
+        "Sales_Person"
       ]
     },
     "Chart-Info": {
@@ -1496,32 +1538,33 @@
       "X-Field": "Units_Sold",
       "Y-Field": [
         "Sales_Date",
-        "Product_Name",
-        "Product_ID",
         "Sales_Person",
-        "Price_USD"
+        "Price_USD",
+        "Product_ID",
+        "Product_Name",
+        "Sales_Person"
       ]
     },
     "Overlay": {
       "Operation": "Extension",
-      "X-Value": 300,
+      "X-Value": "300",
       "Y-Value": "all"
     }
   },
   {
     "Question": "Incorporate the data from the African school into the graph.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Student_ID",
+        "Age",
         "Gender",
         "Grade_Level",
-        "Extracurricular_Activity",
-        "School_Region",
-        "Age",
-        "Student_ID",
-        "Activity_Hours_Per_Week",
         "GPA",
         "Favorite_Subject",
-        "Hours_Studied_Per_Week"
+        "Hours_Studied_Per_Week",
+        "Extracurricular_Activity",
+        "Activity_Hours_Per_Week",
+        "School_Region"
       ]
     },
     "Chart-Info": {
@@ -1540,14 +1583,14 @@
   {
     "Question": "Include the data for the age of 50 in the pie chart.",
     "Data-Info": {
-      "Data-Fields": [
-        "Gender",
+      "Data-Columns": [
         "Patient_ID",
-        "Doctor",
         "Name",
-        "Condition",
         "Age",
+        "Gender",
+        "Condition",
         "Treatment",
+        "Doctor",
         "Hospital",
         "Visit_Date",
         "Next_Visit_Date"
@@ -1562,33 +1605,35 @@
     },
     "Overlay": {
       "Operation": "Extension",
-      "X-Value": 50,
+      "X-Value": "50",
       "Y-Value": "all"
     }
   },
   {
     "Question": "Extend the data for January 10, 2025.",
     "Data-Info": {
-      "Data-Fields": [
-        "Impressions",
+      "Data-Columns": [
+        "Campaign_ID",
+        "Campaign_Name",
+        "Start_Date",
         "End_Date",
         "Budget_USD",
-        "Campaign_Name",
-        "Conversions",
         "Actual_Spend_USD",
-        "Campaign_ID",
-        "ROI_Percentage",
+        "Impressions",
         "Clicks",
-        "Start_Date"
+        "Conversions",
+        "ROI_Percentage"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Line",
       "X-Field": "End_Date",
       "Y-Field": [
+        "Actual_Spend_USD",
         "Impressions",
         "Budget_USD",
-        "Actual_Spend_USD"
+        "Budget_USD",
+        "Impressions"
       ]
     },
     "Overlay": {
@@ -1600,17 +1645,17 @@
   {
     "Question": "Add the data for the x-axis labeled \"Bicycle\" to the graph.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
         "Vehicle_ID",
-        "Owner_Gender",
         "Type",
-        "Fuel_Type",
-        "Year",
-        "Mileage_km",
-        "Model",
         "Manufacturer",
-        "Region",
-        "Owner_Age"
+        "Model",
+        "Year",
+        "Fuel_Type",
+        "Mileage_km",
+        "Owner_Age",
+        "Owner_Gender",
+        "Region"
       ]
     },
     "Chart-Info": {
@@ -1631,16 +1676,16 @@
   {
     "Question": "Add a column of travel rate data to the graph.",
     "Data-Info": {
-      "Data-Fields": [
-        "Visitor_Rating",
-        "Country",
-        "Average_Cost_USD",
-        "Main_Attraction",
-        "Destination_Name",
-        "Average_Days_Stay",
+      "Data-Columns": [
         "Destination_ID",
+        "Destination_Name",
+        "Country",
         "Continent",
+        "Average_Cost_USD",
+        "Average_Days_Stay",
+        "Main_Attraction",
         "Best_Season",
+        "Visitor_Rating",
         "Number_of_Visitors_Million"
       ]
     },
@@ -1648,10 +1693,13 @@
       "Chart-Type": "Scatter",
       "X-Field": "Destination_ID",
       "Y-Field": [
-        "Visitor_Rating",
-        "Average_Days_Stay",
+        "Continent",
         "Destination_ID",
-        "Continent"
+        "Average_Days_Stay",
+        "Continent",
+        "Destination_ID",
+        "Visitor_Rating",
+        "Destination_ID"
       ]
     },
     "Overlay": {
@@ -1663,27 +1711,28 @@
   {
     "Question": "Create a set of currency data.",
     "Data-Info": {
-      "Data-Fields": [
-        "Transaction_Type",
-        "Currency",
-        "Amount",
-        "Bank_Branch",
+      "Data-Columns": [
         "Transaction_ID",
-        "Account_Holder_Gender",
         "Date",
+        "Account_Type",
+        "Amount",
+        "Currency",
+        "Transaction_Type",
         "Account_Holder_Age",
-        "Account_Type"
+        "Account_Holder_Gender",
+        "Bank_Branch"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Scatter",
       "X-Field": "Account_Holder_Age",
       "Y-Field": [
-        "Transaction_Type",
-        "Bank_Branch",
-        "Amount",
-        "Date",
         "Account_Holder_Age",
+        "Date",
+        "Bank_Branch",
+        "Account_Holder_Age",
+        "Amount",
+        "Transaction_Type",
         "Account_Type"
       ]
     },
@@ -1696,14 +1745,14 @@
   {
     "Question": "Incorporate the visit date-related data into the graph.",
     "Data-Info": {
-      "Data-Fields": [
-        "Gender",
+      "Data-Columns": [
         "Patient_ID",
-        "Doctor",
         "Name",
-        "Condition",
         "Age",
+        "Gender",
+        "Condition",
         "Treatment",
+        "Doctor",
         "Hospital",
         "Visit_Date",
         "Next_Visit_Date"
@@ -1714,8 +1763,9 @@
       "X-Field": "Patient_ID",
       "Y-Field": [
         "Gender",
+        "Treatment",
         "Doctor",
-        "Treatment"
+        "Doctor"
       ]
     },
     "Overlay": {
@@ -1727,27 +1777,28 @@
   {
     "Question": "Create the GPA data column from the source data in the graph.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Student_ID",
+        "Age",
         "Gender",
         "Grade_Level",
-        "Extracurricular_Activity",
-        "School_Region",
-        "Age",
-        "Student_ID",
-        "Activity_Hours_Per_Week",
         "GPA",
         "Favorite_Subject",
-        "Hours_Studied_Per_Week"
+        "Hours_Studied_Per_Week",
+        "Extracurricular_Activity",
+        "Activity_Hours_Per_Week",
+        "School_Region"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Bar",
       "X-Field": "Extracurricular_Activity",
       "Y-Field": [
-        "Extracurricular_Activity",
-        "Gender",
+        "Favorite_Subject",
         "Age",
-        "Favorite_Subject"
+        "Extracurricular_Activity",
+        "Extracurricular_Activity",
+        "Gender"
       ]
     },
     "Overlay": {
@@ -1759,17 +1810,17 @@
   {
     "Question": "I want to add horizontal lines to the school district data.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Student_ID",
+        "Age",
         "Gender",
         "Grade_Level",
-        "Extracurricular_Activity",
-        "School_Region",
-        "Age",
-        "Student_ID",
-        "Activity_Hours_Per_Week",
         "GPA",
         "Favorite_Subject",
-        "Hours_Studied_Per_Week"
+        "Hours_Studied_Per_Week",
+        "Extracurricular_Activity",
+        "Activity_Hours_Per_Week",
+        "School_Region"
       ]
     },
     "Chart-Info": {
@@ -1778,6 +1829,7 @@
       "Y-Field": [
         "Age",
         "School_Region",
+        "Activity_Hours_Per_Week",
         "Activity_Hours_Per_Week"
       ]
     },
@@ -1790,16 +1842,16 @@
   {
     "Question": "Please help me add all the reference lines to the chart.",
     "Data-Info": {
-      "Data-Fields": [
-        "Visitor_Rating",
-        "Country",
-        "Average_Cost_USD",
-        "Main_Attraction",
-        "Destination_Name",
-        "Average_Days_Stay",
+      "Data-Columns": [
         "Destination_ID",
+        "Destination_Name",
+        "Country",
         "Continent",
+        "Average_Cost_USD",
+        "Average_Days_Stay",
+        "Main_Attraction",
         "Best_Season",
+        "Visitor_Rating",
         "Number_of_Visitors_Million"
       ]
     },
@@ -1807,12 +1859,14 @@
       "Chart-Type": "Area",
       "X-Field": "Continent",
       "Y-Field": [
-        "Average_Cost_USD",
-        "Main_Attraction",
-        "Destination_Name",
-        "Average_Days_Stay",
         "Best_Season",
-        "Continent"
+        "Average_Days_Stay",
+        "Average_Cost_USD",
+        "Continent",
+        "Average_Days_Stay",
+        "Destination_Name",
+        "Main_Attraction",
+        "Average_Days_Stay"
       ]
     },
     "Overlay": {
@@ -1824,28 +1878,29 @@
   {
     "Question": "I want to highlight the range between 7001 to 7003 on the x-axis.",
     "Data-Info": {
-      "Data-Fields": [
-        "Units_Sold",
-        "Category",
-        "Sales_Date",
+      "Data-Columns": [
+        "Product_ID",
         "Product_Name",
+        "Category",
+        "Price_USD",
+        "Units_Sold",
         "Revenue_USD",
         "Store_Location",
-        "Product_ID",
-        "Sales_Person",
-        "Price_USD"
+        "Sales_Date",
+        "Sales_Person"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Area",
       "X-Field": "Product_ID",
       "Y-Field": [
-        "Sales_Date",
+        "Product_Name",
         "Store_Location",
         "Product_Name",
-        "Product_ID",
+        "Price_USD",
         "Sales_Person",
-        "Price_USD"
+        "Sales_Date",
+        "Product_ID"
       ]
     },
     "Overlay": {
@@ -1860,17 +1915,17 @@
   {
     "Question": "Highlight the data with an annual average return percentage of 8 to 9 for me.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Investor_ID",
+        "Name",
+        "Age",
         "Gender",
+        "Portfolio_Value_USD",
         "Stocks_Percentage",
+        "Bonds_Percentage",
         "Real_Estate_Percentage",
         "Other_Investments_Percentage",
-        "Name",
-        "Investor_ID",
         "Annual_Return_Percentage",
-        "Portfolio_Value_USD",
-        "Age",
-        "Bonds_Percentage",
         "Risk_Level"
       ]
     },
@@ -1878,13 +1933,16 @@
       "Chart-Type": "Area",
       "X-Field": "Annual_Return_Percentage",
       "Y-Field": [
-        "Other_Investments_Percentage",
-        "Stocks_Percentage",
+        "Annual_Return_Percentage",
         "Real_Estate_Percentage",
         "Name",
-        "Investor_ID",
-        "Annual_Return_Percentage",
-        "Portfolio_Value_USD"
+        "Portfolio_Value_USD",
+        "Other_Investments_Percentage",
+        "Name",
+        "Stocks_Percentage",
+        "Portfolio_Value_USD",
+        "Real_Estate_Percentage",
+        "Investor_ID"
       ]
     },
     "Overlay": {
@@ -1899,18 +1957,18 @@
   {
     "Question": "I want to add a trend line to this graph.",
     "Data-Info": {
-      "Data-Fields": [
-        "Customer_Gender",
-        "Price_Per_Night",
-        "Payment_Method",
-        "Total_Cost",
+      "Data-Columns": [
+        "Booking_ID",
         "Customer_ID",
-        "Number_of_Nights",
+        "Check_In_Date",
         "Check_Out_Date",
         "Room_Type",
-        "Booking_ID",
+        "Number_of_Nights",
+        "Price_Per_Night",
+        "Total_Cost",
+        "Payment_Method",
         "Customer_Age",
-        "Check_In_Date"
+        "Customer_Gender"
       ]
     },
     "Chart-Info": {
@@ -1929,30 +1987,32 @@
   {
     "Question": "Help me calculate the trend line for the budget data in dollars.",
     "Data-Info": {
-      "Data-Fields": [
-        "Impressions",
+      "Data-Columns": [
+        "Campaign_ID",
+        "Campaign_Name",
+        "Start_Date",
         "End_Date",
         "Budget_USD",
-        "Campaign_Name",
-        "Conversions",
         "Actual_Spend_USD",
-        "Campaign_ID",
-        "ROI_Percentage",
+        "Impressions",
         "Clicks",
-        "Start_Date"
+        "Conversions",
+        "ROI_Percentage"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Area",
       "X-Field": "End_Date",
       "Y-Field": [
-        "End_Date",
+        "Start_Date",
         "Budget_USD",
         "Campaign_Name",
-        "Conversions",
-        "Campaign_ID",
+        "End_Date",
+        "Campaign_Name",
         "ROI_Percentage",
-        "Start_Date"
+        "Conversions",
+        "Budget_USD",
+        "Campaign_ID"
       ]
     },
     "Overlay": {
@@ -1964,29 +2024,31 @@
   {
     "Question": "Help me find the minimum value of the area group data.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
         "Vehicle_ID",
-        "Owner_Gender",
         "Type",
-        "Fuel_Type",
-        "Year",
-        "Mileage_km",
-        "Model",
         "Manufacturer",
-        "Region",
-        "Owner_Age"
+        "Model",
+        "Year",
+        "Fuel_Type",
+        "Mileage_km",
+        "Owner_Age",
+        "Owner_Gender",
+        "Region"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Area",
       "X-Field": "Owner_Gender",
       "Y-Field": [
-        "Vehicle_ID",
-        "Owner_Gender",
-        "Fuel_Type",
-        "Year",
         "Manufacturer",
-        "Region"
+        "Region",
+        "Vehicle_ID",
+        "Fuel_Type",
+        "Owner_Gender",
+        "Owner_Gender",
+        "Region",
+        "Year"
       ]
     },
     "Overlay": {
@@ -1998,26 +2060,27 @@
   {
     "Question": "I want to see the minimum value of the completed project's data.",
     "Data-Info": {
-      "Data-Fields": [
-        "Department",
-        "Gender",
-        "Years_at_Company",
-        "Name",
-        "Position",
-        "Monthly_Salary_USD",
-        "Projects_Completed",
+      "Data-Columns": [
         "Employee_ID",
-        "Last_Promotion_Year",
+        "Name",
         "Age",
-        "Performance_Score"
+        "Gender",
+        "Department",
+        "Position",
+        "Years_at_Company",
+        "Monthly_Salary_USD",
+        "Performance_Score",
+        "Last_Promotion_Year",
+        "Projects_Completed"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Area",
       "X-Field": "Years_at_Company",
       "Y-Field": [
+        "Projects_Completed",
         "Gender",
-        "Projects_Completed"
+        "Gender"
       ]
     },
     "Overlay": {
@@ -2029,16 +2092,16 @@
   {
     "Question": "I need to know which is the maximum value data of the freight dollar value group.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Shipment_ID",
+        "Origin_City",
         "Destination_City",
         "Shipping_Company",
         "Shipment_Weight_kg",
-        "Departure_Date",
-        "Shipping_Cost_USD",
-        "Origin_City",
-        "Shipment_ID",
-        "Arrival_Date",
         "Shipment_Value_USD",
+        "Shipping_Cost_USD",
+        "Departure_Date",
+        "Arrival_Date",
         "Status"
       ]
     },
@@ -2046,9 +2109,10 @@
       "Chart-Type": "Area",
       "X-Field": "Shipment_Weight_kg",
       "Y-Field": [
-        "Shipment_ID",
+        "Shipment_Value_USD",
         "Shipment_Value_USD",
         "Origin_City",
+        "Shipment_ID",
         "Status"
       ]
     },
@@ -2061,28 +2125,30 @@
   {
     "Question": "Help me find the highest rating.",
     "Data-Info": {
-      "Data-Fields": [
-        "Duration_Minutes",
-        "Title",
-        "Lead_Actor",
-        "Director",
+      "Data-Columns": [
         "Movie_ID",
-        "Rating",
+        "Title",
         "Genre",
         "Release_Year",
-        "Box_Office_Million_USD"
+        "Duration_Minutes",
+        "Rating",
+        "Box_Office_Million_USD",
+        "Director",
+        "Lead_Actor"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Area",
       "X-Field": "Rating",
       "Y-Field": [
-        "Lead_Actor",
-        "Director",
         "Movie_ID",
         "Rating",
+        "Movie_ID",
         "Genre",
-        "Release_Year"
+        "Lead_Actor",
+        "Director",
+        "Release_Year",
+        "Genre"
       ]
     },
     "Overlay": {
@@ -2094,18 +2160,18 @@
   {
     "Question": "I would like to know the average English grades of the students.",
     "Data-Info": {
-      "Data-Fields": [
-        "Gender",
-        "English_Score",
-        "Grade_Level",
-        "Name",
-        "History_Score",
-        "Age",
+      "Data-Columns": [
         "Student_ID",
+        "Name",
+        "Age",
+        "Gender",
+        "Grade_Level",
         "Math_Score",
+        "English_Score",
+        "Science_Score",
+        "History_Score",
         "GPA",
-        "Extracurricular_Activity",
-        "Science_Score"
+        "Extracurricular_Activity"
       ]
     },
     "Chart-Info": {
@@ -2113,6 +2179,7 @@
       "X-Field": "Gender",
       "Y-Field": [
         "English_Score",
+        "Science_Score",
         "Age",
         "Math_Score",
         "GPA",
@@ -2128,23 +2195,24 @@
   {
     "Question": "Calculate the average humidity percentage for me.",
     "Data-Info": {
-      "Data-Fields": [
-        "Temperature_C",
-        "NO2_Level",
-        "PM2.5_Level",
-        "City",
+      "Data-Columns": [
         "Station_ID",
-        "Humidity_Percentage",
-        "O3_Level",
+        "City",
         "Date",
+        "PM2.5_Level",
+        "PM10_Level",
+        "NO2_Level",
+        "O3_Level",
         "CO_Level",
-        "PM10_Level"
+        "Temperature_C",
+        "Humidity_Percentage"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Area",
       "X-Field": "O3_Level",
       "Y-Field": [
+        "Humidity_Percentage",
         "NO2_Level",
         "Humidity_Percentage"
       ]
@@ -2158,17 +2226,17 @@
   {
     "Question": "Please help me label all the detailed data in the graphs.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Investor_ID",
+        "Name",
+        "Age",
         "Gender",
+        "Portfolio_Value_USD",
         "Stocks_Percentage",
+        "Bonds_Percentage",
         "Real_Estate_Percentage",
         "Other_Investments_Percentage",
-        "Name",
-        "Investor_ID",
         "Annual_Return_Percentage",
-        "Portfolio_Value_USD",
-        "Age",
-        "Bonds_Percentage",
         "Risk_Level"
       ]
     },
@@ -2176,8 +2244,8 @@
       "Chart-Type": "Area",
       "X-Field": "Gender",
       "Y-Field": [
-        "Investor_ID",
-        "Other_Investments_Percentage"
+        "Other_Investments_Percentage",
+        "Investor_ID"
       ]
     },
     "Overlay": {
@@ -2189,14 +2257,14 @@
   {
     "Question": "Help me expand the data for Dr. Clark's group.",
     "Data-Info": {
-      "Data-Fields": [
-        "Gender",
+      "Data-Columns": [
         "Patient_ID",
-        "Doctor",
         "Name",
-        "Condition",
         "Age",
+        "Gender",
+        "Condition",
         "Treatment",
+        "Doctor",
         "Hospital",
         "Visit_Date",
         "Next_Visit_Date"
@@ -2206,11 +2274,13 @@
       "Chart-Type": "Area",
       "X-Field": "Doctor",
       "Y-Field": [
+        "Patient_ID",
+        "Next_Visit_Date",
+        "Gender",
+        "Hospital",
         "Gender",
         "Patient_ID",
-        "Age",
-        "Hospital",
-        "Next_Visit_Date"
+        "Age"
       ]
     },
     "Overlay": {
@@ -2222,27 +2292,27 @@
   {
     "Question": "Please help me add employee group data to the chart.",
     "Data-Info": {
-      "Data-Fields": [
-        "Employees",
+      "Data-Columns": [
         "Company_ID",
-        "Headquarters_Location",
-        "CEO_Name",
+        "Company_Name",
         "Founding_Year",
         "Industry",
-        "Company_Name",
+        "Employees",
         "Annual_Revenue_Million_USD",
-        "Funding_Stage"
+        "Funding_Stage",
+        "Headquarters_Location",
+        "CEO_Name"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Area",
       "X-Field": "Industry",
       "Y-Field": [
-        "Headquarters_Location",
-        "CEO_Name",
-        "Funding_Stage",
         "Company_Name",
-        "Annual_Revenue_Million_USD"
+        "Annual_Revenue_Million_USD",
+        "CEO_Name",
+        "Headquarters_Location",
+        "Funding_Stage"
       ]
     },
     "Overlay": {
@@ -2254,18 +2324,18 @@
   {
     "Question": "Please help me add the check-out dates data group in the chart.",
     "Data-Info": {
-      "Data-Fields": [
-        "Customer_Gender",
-        "Price_Per_Night",
-        "Payment_Method",
-        "Total_Cost",
+      "Data-Columns": [
+        "Booking_ID",
         "Customer_ID",
-        "Number_of_Nights",
+        "Check_In_Date",
         "Check_Out_Date",
         "Room_Type",
-        "Booking_ID",
+        "Number_of_Nights",
+        "Price_Per_Night",
+        "Total_Cost",
+        "Payment_Method",
         "Customer_Age",
-        "Check_In_Date"
+        "Customer_Gender"
       ]
     },
     "Chart-Info": {
@@ -2273,10 +2343,11 @@
       "X-Field": "Customer_ID",
       "Y-Field": [
         "Customer_Gender",
-        "Payment_Method",
-        "Customer_ID",
         "Room_Type",
-        "Check_In_Date"
+        "Check_In_Date",
+        "Customer_ID",
+        "Payment_Method",
+        "Room_Type"
       ]
     },
     "Overlay": {
@@ -2288,29 +2359,31 @@
   {
     "Question": "Help me expand the data for January 10, 2025.",
     "Data-Info": {
-      "Data-Fields": [
-        "Impressions",
+      "Data-Columns": [
+        "Campaign_ID",
+        "Campaign_Name",
+        "Start_Date",
         "End_Date",
         "Budget_USD",
-        "Campaign_Name",
-        "Conversions",
         "Actual_Spend_USD",
-        "Campaign_ID",
-        "ROI_Percentage",
+        "Impressions",
         "Clicks",
-        "Start_Date"
+        "Conversions",
+        "ROI_Percentage"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Scatter",
       "X-Field": "End_Date",
       "Y-Field": [
-        "Impressions",
         "End_Date",
-        "Conversions",
-        "Actual_Spend_USD",
+        "Impressions",
+        "ROI_Percentage",
         "Campaign_ID",
-        "ROI_Percentage"
+        "Conversions",
+        "Impressions",
+        "Impressions",
+        "Actual_Spend_USD"
       ]
     },
     "Overlay": {
@@ -2322,16 +2395,16 @@
   {
     "Question": "Show me the labels for the headquarters location.",
     "Data-Info": {
-      "Data-Fields": [
-        "Employees",
+      "Data-Columns": [
         "Company_ID",
-        "Headquarters_Location",
-        "CEO_Name",
+        "Company_Name",
         "Founding_Year",
         "Industry",
-        "Company_Name",
+        "Employees",
         "Annual_Revenue_Million_USD",
-        "Funding_Stage"
+        "Funding_Stage",
+        "Headquarters_Location",
+        "CEO_Name"
       ]
     },
     "Chart-Info": {
@@ -2340,9 +2413,12 @@
       "Y-Field": [
         "Headquarters_Location",
         "CEO_Name",
+        "Annual_Revenue_Million_USD",
+        "Headquarters_Location",
+        "CEO_Name",
         "Founding_Year",
         "Company_Name",
-        "Annual_Revenue_Million_USD"
+        "Founding_Year"
       ]
     },
     "Overlay": {
@@ -2354,27 +2430,27 @@
   {
     "Question": "Can you help me label the data tags with their corresponding years?",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
         "Vehicle_ID",
-        "Owner_Gender",
         "Type",
-        "Fuel_Type",
-        "Year",
-        "Mileage_km",
-        "Model",
         "Manufacturer",
-        "Region",
-        "Owner_Age"
+        "Model",
+        "Year",
+        "Fuel_Type",
+        "Mileage_km",
+        "Owner_Age",
+        "Owner_Gender",
+        "Region"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Scatter",
       "X-Field": "Vehicle_ID",
       "Y-Field": [
-        "Type",
         "Owner_Gender",
+        "Owner_Age",
         "Year",
-        "Owner_Age"
+        "Type"
       ]
     },
     "Overlay": {
@@ -2386,16 +2462,16 @@
   {
     "Question": "I would like to see detailed labels for the director's data.",
     "Data-Info": {
-      "Data-Fields": [
-        "Duration_Minutes",
-        "Title",
-        "Lead_Actor",
-        "Director",
+      "Data-Columns": [
         "Movie_ID",
-        "Rating",
+        "Title",
         "Genre",
         "Release_Year",
-        "Box_Office_Million_USD"
+        "Duration_Minutes",
+        "Rating",
+        "Box_Office_Million_USD",
+        "Director",
+        "Lead_Actor"
       ]
     },
     "Chart-Info": {
@@ -2405,6 +2481,8 @@
         "Director",
         "Movie_ID",
         "Release_Year",
+        "Duration_Minutes",
+        "Movie_ID",
         "Duration_Minutes"
       ]
     },
@@ -2417,17 +2495,17 @@
   {
     "Question": "Help me draw the average values for all groups.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Property_ID",
+        "Location",
+        "Property_Type",
         "Bedrooms",
         "Bathrooms",
+        "Square_Feet",
+        "Price_USD",
         "Listing_Date",
         "Agent_Name",
-        "Property_Type",
-        "Agent_Contact",
-        "Location",
-        "Property_ID",
-        "Square_Feet",
-        "Price_USD"
+        "Agent_Contact"
       ]
     },
     "Chart-Info": {
@@ -2435,8 +2513,8 @@
       "X-Field": "Price_USD",
       "Y-Field": [
         "Bathrooms",
-        "Property_Type",
-        "Location"
+        "Location",
+        "Property_Type"
       ]
     },
     "Overlay": {
@@ -2448,17 +2526,17 @@
   {
     "Question": "I want to know the maximum value of the gender group.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Investor_ID",
+        "Name",
+        "Age",
         "Gender",
+        "Portfolio_Value_USD",
         "Stocks_Percentage",
+        "Bonds_Percentage",
         "Real_Estate_Percentage",
         "Other_Investments_Percentage",
-        "Name",
-        "Investor_ID",
         "Annual_Return_Percentage",
-        "Portfolio_Value_USD",
-        "Age",
-        "Bonds_Percentage",
         "Risk_Level"
       ]
     },
@@ -2466,12 +2544,15 @@
       "Chart-Type": "Scatter",
       "X-Field": "Gender",
       "Y-Field": [
-        "Gender",
         "Stocks_Percentage",
-        "Other_Investments_Percentage",
-        "Investor_ID",
         "Portfolio_Value_USD",
+        "Gender",
+        "Investor_ID",
+        "Gender",
+        "Bonds_Percentage",
+        "Investor_ID",
         "Age",
+        "Other_Investments_Percentage",
         "Bonds_Percentage"
       ]
     },
@@ -2484,18 +2565,18 @@
   {
     "Question": "I want you to help me find the maximum value of all the data sets.",
     "Data-Info": {
-      "Data-Fields": [
-        "Gender",
-        "English_Score",
-        "Grade_Level",
-        "Name",
-        "History_Score",
-        "Age",
+      "Data-Columns": [
         "Student_ID",
+        "Name",
+        "Age",
+        "Gender",
+        "Grade_Level",
         "Math_Score",
+        "English_Score",
+        "Science_Score",
+        "History_Score",
         "GPA",
-        "Extracurricular_Activity",
-        "Science_Score"
+        "Extracurricular_Activity"
       ]
     },
     "Chart-Info": {
@@ -2516,30 +2597,30 @@
   {
     "Question": "I would like to know what the lowest humidity percentage is.",
     "Data-Info": {
-      "Data-Fields": [
-        "Temperature_C",
-        "NO2_Level",
-        "PM2.5_Level",
-        "City",
+      "Data-Columns": [
         "Station_ID",
-        "Humidity_Percentage",
-        "O3_Level",
+        "City",
         "Date",
+        "PM2.5_Level",
+        "PM10_Level",
+        "NO2_Level",
+        "O3_Level",
         "CO_Level",
-        "PM10_Level"
+        "Temperature_C",
+        "Humidity_Percentage"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Scatter",
       "X-Field": "CO_Level",
       "Y-Field": [
-        "NO2_Level",
-        "PM2.5_Level",
-        "Station_ID",
         "Humidity_Percentage",
         "O3_Level",
-        "CO_Level",
-        "PM10_Level"
+        "NO2_Level",
+        "PM10_Level",
+        "Station_ID",
+        "PM2.5_Level",
+        "CO_Level"
       ]
     },
     "Overlay": {
@@ -2551,29 +2632,32 @@
   {
     "Question": "Please help me to add a trendline to the total US dollar expenditure group.",
     "Data-Info": {
-      "Data-Fields": [
-        "Total_Purchases",
-        "Gender",
-        "Name",
-        "Last_Purchase_Date",
+      "Data-Columns": [
         "Customer_ID",
-        "Average_Purchase_Value_USD",
+        "Name",
         "Age",
-        "Loyalty_Member",
+        "Gender",
+        "Total_Purchases",
         "Total_Spent_USD",
-        "Favorite_Category"
+        "Favorite_Category",
+        "Average_Purchase_Value_USD",
+        "Last_Purchase_Date",
+        "Loyalty_Member"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Scatter",
       "X-Field": "Favorite_Category",
       "Y-Field": [
-        "Name",
         "Last_Purchase_Date",
-        "Age",
-        "Loyalty_Member",
         "Total_Spent_USD",
-        "Favorite_Category"
+        "Name",
+        "Total_Spent_USD",
+        "Last_Purchase_Date",
+        "Favorite_Category",
+        "Age",
+        "Age",
+        "Loyalty_Member"
       ]
     },
     "Overlay": {
@@ -2585,17 +2669,17 @@
   {
     "Question": "Show me the trend line for all group data.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Investor_ID",
+        "Name",
+        "Age",
         "Gender",
+        "Portfolio_Value_USD",
         "Stocks_Percentage",
+        "Bonds_Percentage",
         "Real_Estate_Percentage",
         "Other_Investments_Percentage",
-        "Name",
-        "Investor_ID",
         "Annual_Return_Percentage",
-        "Portfolio_Value_USD",
-        "Age",
-        "Bonds_Percentage",
         "Risk_Level"
       ]
     },
@@ -2603,9 +2687,9 @@
       "Chart-Type": "Scatter",
       "X-Field": "Age",
       "Y-Field": [
-        "Name",
         "Stocks_Percentage",
-        "Risk_Level"
+        "Risk_Level",
+        "Name"
       ]
     },
     "Overlay": {
@@ -2617,61 +2701,63 @@
   {
     "Question": "Emphasize the data for the number 4.",
     "Data-Info": {
-      "Data-Fields": [
-        "Customer_Gender",
-        "Price_Per_Night",
-        "Payment_Method",
-        "Total_Cost",
+      "Data-Columns": [
+        "Booking_ID",
         "Customer_ID",
-        "Number_of_Nights",
+        "Check_In_Date",
         "Check_Out_Date",
         "Room_Type",
-        "Booking_ID",
+        "Number_of_Nights",
+        "Price_Per_Night",
+        "Total_Cost",
+        "Payment_Method",
         "Customer_Age",
-        "Check_In_Date"
+        "Customer_Gender"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Scatter",
       "X-Field": "Number_of_Nights",
       "Y-Field": [
-        "Price_Per_Night",
-        "Total_Cost",
-        "Customer_ID",
         "Room_Type",
-        "Booking_ID"
+        "Customer_ID",
+        "Total_Cost",
+        "Total_Cost",
+        "Booking_ID",
+        "Price_Per_Night"
       ]
     },
     "Overlay": {
       "Operation": "Highlight",
-      "X-Value": 4,
+      "X-Value": "4",
       "Y-Value": "all"
     }
   },
   {
     "Question": "Help me highlight all the data in the range from 8 to 22.",
     "Data-Info": {
-      "Data-Fields": [
-        "Total_Purchases",
-        "Gender",
-        "Name",
-        "Last_Purchase_Date",
+      "Data-Columns": [
         "Customer_ID",
-        "Average_Purchase_Value_USD",
+        "Name",
         "Age",
-        "Loyalty_Member",
+        "Gender",
+        "Total_Purchases",
         "Total_Spent_USD",
-        "Favorite_Category"
+        "Favorite_Category",
+        "Average_Purchase_Value_USD",
+        "Last_Purchase_Date",
+        "Loyalty_Member"
       ]
     },
     "Chart-Info": {
       "Chart-Type": "Scatter",
       "X-Field": "Total_Purchases",
       "Y-Field": [
-        "Last_Purchase_Date",
         "Age",
+        "Name",
         "Loyalty_Member",
-        "Name"
+        "Last_Purchase_Date",
+        "Age"
       ]
     },
     "Overlay": {
@@ -2686,16 +2772,16 @@
   {
     "Question": "Add reference lines to all the data in this chart.",
     "Data-Info": {
-      "Data-Fields": [
-        "Employees",
+      "Data-Columns": [
         "Company_ID",
-        "Headquarters_Location",
-        "CEO_Name",
+        "Company_Name",
         "Founding_Year",
         "Industry",
-        "Company_Name",
+        "Employees",
         "Annual_Revenue_Million_USD",
-        "Funding_Stage"
+        "Funding_Stage",
+        "Headquarters_Location",
+        "CEO_Name"
       ]
     },
     "Chart-Info": {
@@ -2703,6 +2789,7 @@
       "X-Field": "Company_ID",
       "Y-Field": [
         "Headquarters_Location",
+        "Annual_Revenue_Million_USD",
         "Annual_Revenue_Million_USD"
       ]
     },
@@ -2715,16 +2802,16 @@
   {
     "Question": "I would like you to help me add a set of reference lines to this pie chart.",
     "Data-Info": {
-      "Data-Fields": [
-        "Transaction_Type",
-        "Currency",
-        "Amount",
-        "Bank_Branch",
+      "Data-Columns": [
         "Transaction_ID",
-        "Account_Holder_Gender",
         "Date",
+        "Account_Type",
+        "Amount",
+        "Currency",
+        "Transaction_Type",
         "Account_Holder_Age",
-        "Account_Type"
+        "Account_Holder_Gender",
+        "Bank_Branch"
       ]
     },
     "Chart-Info": {
@@ -2743,16 +2830,16 @@
   {
     "Question": "The area with a highlight value of 20,000",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Shipment_ID",
+        "Origin_City",
         "Destination_City",
         "Shipping_Company",
         "Shipment_Weight_kg",
-        "Departure_Date",
-        "Shipping_Cost_USD",
-        "Origin_City",
-        "Shipment_ID",
-        "Arrival_Date",
         "Shipment_Value_USD",
+        "Shipping_Cost_USD",
+        "Departure_Date",
+        "Arrival_Date",
         "Status"
       ]
     },
@@ -2765,24 +2852,24 @@
     },
     "Overlay": {
       "Operation": "Highlight",
-      "X-Value": 20000,
+      "X-Value": "20000",
       "Y-Value": "all"
     }
   },
   {
     "Question": "Please help me identify the smallest area in this pie chart.",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
         "Vehicle_ID",
-        "Owner_Gender",
         "Type",
-        "Fuel_Type",
-        "Year",
-        "Mileage_km",
-        "Model",
         "Manufacturer",
-        "Region",
-        "Owner_Age"
+        "Model",
+        "Year",
+        "Fuel_Type",
+        "Mileage_km",
+        "Owner_Age",
+        "Owner_Gender",
+        "Region"
       ]
     },
     "Chart-Info": {
@@ -2801,16 +2888,16 @@
   {
     "Question": "Help me identify the maximum value in this pie chart.",
     "Data-Info": {
-      "Data-Fields": [
-        "Visitor_Rating",
-        "Country",
-        "Average_Cost_USD",
-        "Main_Attraction",
-        "Destination_Name",
-        "Average_Days_Stay",
+      "Data-Columns": [
         "Destination_ID",
+        "Destination_Name",
+        "Country",
         "Continent",
+        "Average_Cost_USD",
+        "Average_Days_Stay",
+        "Main_Attraction",
         "Best_Season",
+        "Visitor_Rating",
         "Number_of_Visitors_Million"
       ]
     },
@@ -2830,16 +2917,16 @@
   {
     "Question": "\"Add data labels to this pie chart.\"",
     "Data-Info": {
-      "Data-Fields": [
+      "Data-Columns": [
+        "Shipment_ID",
+        "Origin_City",
         "Destination_City",
         "Shipping_Company",
         "Shipment_Weight_kg",
-        "Departure_Date",
-        "Shipping_Cost_USD",
-        "Origin_City",
-        "Shipment_ID",
-        "Arrival_Date",
         "Shipment_Value_USD",
+        "Shipping_Cost_USD",
+        "Departure_Date",
+        "Arrival_Date",
         "Status"
       ]
     },
@@ -2859,17 +2946,17 @@
   {
     "Question": "Help me expand Ethan Davis' data onto this pie chart.",
     "Data-Info": {
-      "Data-Fields": [
-        "Gender",
-        "Country",
-        "Sport",
+      "Data-Columns": [
+        "Athlete_ID",
         "Name",
+        "Age",
+        "Gender",
+        "Sport",
+        "Event",
+        "Country",
         "Personal_Best_Time",
         "Medals_Won",
-        "Event",
-        "Age",
-        "Coach_Name",
-        "Athlete_ID"
+        "Coach_Name"
       ]
     },
     "Chart-Info": {

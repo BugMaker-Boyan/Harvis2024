@@ -1,12 +1,12 @@
 import openai
-import os
-from prompt import PROMPT_TEMPLATE, EXAMPLE_TEMPLATE
+from prompt import *
 import json
 import re
 from util import SimilarityUtil
 import argparse
 import random
 from retrying import retry
+import os
 
 
 COST_PER_THOUSAND = {
@@ -14,29 +14,35 @@ COST_PER_THOUSAND = {
     "gpt-3.5-turbo": [0.0010, 0.0020]
 }
 
-
-def setup_openai(openai_api_key=None, openai_base_url=None):
-    if openai_api_key:
-        os.environ["OPENAI_API_KEY"] = openai_api_key
-    if openai_base_url:
-        os.environ["OPENAI_BASE_URL"] = openai_base_url
+OPERATIONS_DESC = {
+    "Reference": "Add a group of reference line for chart",
+    "Highlight": "Highlight user nominated parts of chart",
+    "Trendline": "Show the accurate trendline of specific data groups",
+    "Statistic-min": "Statistic minumum (min) value of specific data groups",
+    "Statistic-max": "Statistic maximum (max) value of specific data groups",
+    "Statistic-mean": "Statistic average (mean) value of specific data groups",
+    "Label": "Add data labels of specific data groups",
+    "Extension": "Extend new data records based on x-field into chart",
+    "Creation": "Create new data group based on y-field into chart"
+}
 
 
 def format_prompt(seed_examples, return_messages=False):
-    example_list = []
-    valid_operations = set([json.loads(example["output"])["operation"] for example in seed_examples])
-    for example in seed_examples:
-        format_example = EXAMPLE_TEMPLATE.format(
-            INPUT=example["input"].strip(),
-            GROUP=example["group"].strip(),
-            OUTPUT=example["output"].strip()
-        ).strip()
-        example_list.append(format_example)
+    context_operations = set([example["Overlay"]["Operation"] for example in seed_examples])
+    examples_str = ""
+    for idx, example in enumerate(seed_examples):
+        _example_repr = json.dumps(example).replace('\n', '')
+        examples_str += f"{idx+1}. {_example_repr}\n"
+        
+    operations_desc_str = ""
+    for idx, operation in enumerate(context_operations):
+        operations_desc_str += f"{idx+1}. {operation}: {OPERATIONS_DESC[operation]}\n"
     
-    prompt = PROMPT_TEMPLATE.format(
-        VALID_OPERATIONS=", ".join(valid_operations),
-        EXAMPLES="\n\n".join(example_list)
-    )
+    prompt = GENERATE_PROMPT_TEMPLATE.format(
+        CONTEXT_OPERATIONS=", ".join(context_operations).strip(),
+        CONTEXT_OPERATIONS_DESC=operations_desc_str.strip(),
+        EXAMPLES=examples_str.strip()
+    ).strip()
     
     if return_messages:
         return [{"role": "user", "content": prompt}]
@@ -55,7 +61,7 @@ def _ask_chat_retry_condition(exception):
     wait_fixed=2000,
     retry_on_exception=_ask_chat_retry_condition
 )
-def ask_chat(client, model, messages: list, temperature=1.0, max_tokens=512):
+def ask_chat(client, model, messages: list, temperature=1.0, max_tokens=1024):
     response = client.chat.completions.create(
         model=model,
         messages=messages,
@@ -71,70 +77,63 @@ def ask_chat(client, model, messages: list, temperature=1.0, max_tokens=512):
     )
 
 
-def is_output_valid(output_json):        
-    
-    def is_operation_valid(operation):
-        return isinstance(operation, str) and operation in ("create", "encodings", "extend", "highlight", "trendline", "reference", "max", "mean", "min")
-    
-    def is_file_valid(file):
-        return file is None or isinstance(file, str)
-
-    def is_pointer_valid(pointer):
-        if pointer is None:
-            return True
-        if not isinstance(pointer, list):
-            return False
-        all_integers_flag = True
-        for idx in pointer:
-            if not isinstance(idx, int):
-                all_integers_flag = False
-                break
-        return all_integers_flag
-    
-    def is_group_valid(group):
-        return group is None or isinstance(group, str)
-
-    if set(output_json.keys()) != set(["operation", "file", "pointer", "group"]):
+def is_valid(example_json):
+    if set(example_json.keys()) != set(["Question", "Data-Info", "Chart-Info", "Overlay"]):
+        return False
+    if set(example_json["Data-Info"].keys()) != set(["Data-Fields"]):
+        return False
+    if not isinstance(example_json["Data-Info"]["Data-Fields"], list):
+        return False
+    if set(example_json["Chart-Info"].keys()) != set(["Chart-Type", "X-Field", "Y-Field"]):
+        return False
+    if not isinstance(example_json["Chart-Info"]["Chart-Type"], str):
+        return False
+    if example_json["Chart-Info"]["Chart-Type"] not in ["Bar", "Line", "Pie", "Scatter", "Area"]:
+        return False
+    if example_json["Chart-Info"]["X-Field"] not in example_json["Data-Info"]["Data-Fields"]:
+        return False
+    if not isinstance(example_json["Chart-Info"]["Y-Field"], str) and not isinstance(example_json["Chart-Info"]["Y-Field"], list):
+        return False
+    if isinstance(example_json["Chart-Info"]["Y-Field"], str) and example_json["Chart-Info"]["Y-Field"] not in example_json["Data-Info"]["Data-Fields"]:
+        return False
+    if isinstance(example_json["Chart-Info"]["Y-Field"], list) and not set(example_json["Chart-Info"]["Y-Field"]).issubset(set(example_json["Data-Info"]["Data-Fields"])):
+        return False
+    if set(example_json["Overlay"].keys()) != set(["Operation", "X-Value", "Y-Value"]):
+        return False
+    if not isinstance(example_json["Overlay"]["Operation"], str):
+        return False
+    if example_json["Overlay"]["Operation"] not in ["Reference", "Highlight", "Trendline", "Statistic-min", "Statistic-max", "Statistic-mean", "Label", "Extension", "Creation"]:
         return False
     
-    return is_operation_valid(output_json["operation"]) and is_file_valid(output_json["file"]) and is_pointer_valid(output_json["pointer"]) and is_group_valid(output_json["group"])
-
-
-def is_group_valid(group_json, output_json):
-    all_strings_flag = True
-    for g in group_json:
-        if not isinstance(g, str):
-            all_strings_flag = False
-            break
-    if not all_strings_flag:
-        return False
-    else:
-        if output_json["group"] is None:
+    # It's hard to check "X-Value", skip it
+    
+    if example_json["Overlay"]["Y-Value"] is not None:
+        if isinstance(example_json["Overlay"]["Y-Value"], str):
+            if example_json["Overlay"]["Y-Value"] != "all" and example_json["Overlay"]["Y-Value"] not in example_json["Data-Info"]["Data-Fields"]:
+                return False
             return True
-        else:
-            return output_json["group"] in group_json
+        if isinstance(example_json["Overlay"]["Y-Value"], list):
+            if not set(example_json["Overlay"]["Y-Value"]).issubset(set(example_json["Data-Info"]["Data-Fields"])):
+                return False
+            return True
+        return False
+
+    return True
+
 
 def extract_examples(response):
-    pattern = r"\d+\.\s*INPUT:\s*(.*?)\nGROUP:\s*(\[.*?\])\nOUTPUT:\s*(\{.*?\})(?=\n*)"
-    response = "1. INPUT: " + response
+    pattern = r"\d+\.\s*(\{.*?\})(?=\n*\d+\.|$)"
+    response = "1. " + response
     all_matches = re.findall(pattern, response)
     examples = []
-    for match_input, match_group, match_output in all_matches:
+    for match in all_matches:
         try:
-            output_json = json.loads(match_output)
-            group_json = json.loads(match_group)
-            sample = {
-                "input": match_input,
-                "group": json.dumps(group_json).replace("\n", "").strip(),
-                "output": json.dumps(output_json).replace("\n", "").strip()
-            }
-            if not is_output_valid(output_json):
-                continue
-            if not is_group_valid(group_json, output_json):
+            example_json = json.loads(match)
+            if not is_valid(example_json):
                 continue
         except Exception as e:
             continue
-        examples.append(sample)
+        examples.append(example_json)
     return examples
 
 
@@ -153,7 +152,7 @@ def parse_args():
     )
     parser.add_argument(
         "--seed_example_num",
-        default=3,
+        default=5,
         type=int
     )
     parser.add_argument(
@@ -168,17 +167,7 @@ def parse_args():
     )
     parser.add_argument(
         "--seed_dataset_path",
-        default="./data/seed_data.json",
-        type=str
-    )
-    parser.add_argument(
-        "--openai_api_key",
-        default=None,
-        type=str
-    )
-    parser.add_argument(
-        "--openai_base_url",
-        default=None,
+        default="./data/seed_dataset.json",
         type=str
     )
     args = parser.parse_args()
@@ -193,7 +182,9 @@ def main(args):
     
     generate_dataset = []
     
-    setup_openai(args.openai_api_key, args.openai_base_url)
+    if os.path.exists(args.generate_dataset_path):
+        generate_dataset = json.load(open(args.generate_dataset_path, "r", encoding="utf-8"))
+    
     client = openai.OpenAI()
     
     similarity_util = SimilarityUtil()

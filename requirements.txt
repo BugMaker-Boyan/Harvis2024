@@ -2,8 +2,3 @@ openai
 retrying
 torch
 sentence-transformers
-transformers
-datasets
-accelerate
-tensorboard
-tensorboardX
